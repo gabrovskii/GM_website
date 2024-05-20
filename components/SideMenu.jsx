@@ -83,7 +83,6 @@ const SideMenu = () => {
             })}
           </div>
           <div className="flex items-center flex-col justify-center text-center">
-            <p className="max-lg:hidden text-xs">Copyright © 2023 Antonio Rogers. All rights reserved.</p>
           </div>
         </div>
       </section>

@@ -14,10 +14,6 @@ const About = () => {
         </div>
         <div className="mt-7">
           <p className="mt-6 text-gray-900 text-[20px] leadiing-10">
-            Bacharel em ciência da computação, cursando especialização em qualidade e teste de software, com mais de 5
-            anos de experiência com automação, testes acústicos e de teste de software Android.
-          </p>
-          <p className="mt-6 text-gray-900 text-[20px] leadiing-10">
             <b>Mas e fora do trabalho?</b>
           </p>
           <ul class="mt-2 list-disc list-inside text-[20px] leadiing-10">
