@@ -24,7 +24,7 @@ const RedesSociais = () => {
       </div>
       <div className="mt-7">
         <p className="mt-6 text-gray-900 text-[20px] leadiing-10">
-          Eu estou por toda a internet! me encontra é facil.
+          Eu estou por toda a internet! me encontrar é facil.
         </p>
         <p className="mt-6 text-gray-900 text-[20px] leadiing-10">
           <b>Onde me encontrar?</b>
