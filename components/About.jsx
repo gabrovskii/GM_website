@@ -50,14 +50,10 @@ const About = () => {
         </div>
       </div>
 
-      <div className="md:grid grid-cols-2 ">
+      <div className="md:grid grid-cols-2 md:hidden">
         <div className="md:mr-3">
           <Image src="/assets/drone2.jpg" width={300} height={300} alt="Gabriel Menezes" className="rounded-lg" />
           <p className="text-center">Drone/Praia de bombinhas, SC</p>
-        </div>
-        <div className="md:ml-3">
-          <Image src="/assets/home.jpg" width={300} height={300} alt="Gabriel Menezes" className="rounded-lg" />
-          <p className="text-center">Legenda 4</p>
         </div>
       </div>
     </div>
