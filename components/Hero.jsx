@@ -6,7 +6,7 @@ import "@/app/animations.css";
 const Hero = () => {
   return (
     <section className="hero-container">
-            <div className="hero-content-container">
+            <div className="hero-content-container flex items-center justify-center">
         <div className="max-md:order-2 flex flex-col gap-5 z-40">
           <div className="text-4xl lg:text-6xl ">
             <h1 className="">Olá, eu sou <b className=" text-dark-red">Gabriel</b></h1>
@@ -40,8 +40,6 @@ const Hero = () => {
       </div>
 
           </div>
-
-
       <ul className="bg-squares">
         <li></li>
         <li></li>
