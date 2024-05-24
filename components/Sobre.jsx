@@ -47,19 +47,19 @@ const Sobre = () => {
             <Image src="/assets/PB.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
           </div>
           <div className="hidden lg:block">
-          <Image src="/assets/PB.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+          <Image src="/assets/drone.JPEG" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
           </div>
           <div className="hidden lg:block">
-          <Image src="/assets/PB.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+          <Image src="/assets/drone2.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
           </div>
           <div className="col-span-2 row-span-2">
             <Image src="/assets/PythonNorte.JPG" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
           </div>
           <div className="hidden lg:block">
-            <Image src="/assets/PB.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+            <Image src="/assets/GM.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
           </div>
           <div className="hidden lg:block">
-          <Image src="/assets/PB.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+          <Image src="/assets/pokemon.JPG" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
           </div>
         </div>
       </div>
