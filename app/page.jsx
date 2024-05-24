@@ -6,6 +6,8 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import TopButton from "@/components/TopButton";
 import RedesSociais from "@/components/RedesSociais";
+import Sobre from "@/components/Sobre";
+
 
 const Home = () => {
   /* em contrução
@@ -20,7 +22,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <About />
+      <Sobre />
       <RedesSociais/>
       <Contact />
       <Footer />
