@@ -15,11 +15,7 @@ export const sidebarMenuLinks = [
     sectionId: "redesSociais",
   },
 
-  {
-    route: "#contact",
-    label: "Contato",
-    sectionId: "contact",
-  },
+
 ];
 
 /*
