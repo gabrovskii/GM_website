@@ -60,7 +60,7 @@ const SideMenu = () => {
 
   return (
     <>
-      <section className={`side-menu border-r ${isOpen ? "max-lg:block" : "max-md:hidden"}`}>
+      <section className={`w-80 side-menu border-r ${isOpen ? "max-lg:block" : "max-md:hidden"}`}>
         <div className="flex w-full flex-1 flex-col gap-30 justify-between items-center">
           <div className="flex justify-center items-center flex-col gap-2">
           </div>
