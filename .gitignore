@@ -1,12 +1,26 @@
-# Ignorar diretórios de dependências
-node_modules/
-.next/
+# Arquivos e diretórios do Next.js
 .next/
 .next/cache/
 .next/server/
 .next/static/webpack/
 .next/static/development/
 .next/trace
+
+# Arquivos específicos
+.next/app-build-manifest.json
+.next/server/app-paths-manifest.json
+.next/server/middleware-build-manifest.js
+.next/server/next-font-manifest.js
+.next/server/next-font-manifest.json
+
+# Arquivos excluídos
+.next/server/app/page.js
+.next/server/app/page_client-reference-manifest.js
+.next/server/vendor-chunks/
+.next/static/css/
+.next/static/media/
+.next/static/webpack/
+.next/static/webpack/webpack.*.hot-update.js
+.next/static/webpack/*.webpack.hot-update.json
 .next/types/
-
-
+node_modules
