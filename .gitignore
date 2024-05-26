@@ -1,4 +1,5 @@
 # Ignorar diretórios de dependências
+.next/
 node_modules/
 .next/
 
