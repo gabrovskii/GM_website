@@ -1,5 +1,12 @@
 # Ignorar diretórios de dependências
-.next/
 node_modules/
 .next/
+.next/
+.next/cache/
+.next/server/
+.next/static/webpack/
+.next/static/development/
+.next/trace
+.next/types/
+
 
