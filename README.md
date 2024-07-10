@@ -12,3 +12,4 @@
 * [Aprenda em 13:37: Tailwind CSS](https://www.youtube.com/watch?v=dHwY5lRfkoQ)
 * [Tailwind CSS Guide](https://tailwindcss.com/docs/guides/vite)
 * [Let's Build a Light/Dark Mode Toggle with Tailwind and Next.js](https://www.youtube.com/watch?v=L7E3XEncsqI&t=308s)
+.
