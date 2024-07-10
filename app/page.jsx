@@ -7,6 +7,8 @@ import Skills from "@/components/Skills";
 import TopButton from "@/components/TopButton";
 import RedesSociais from "@/components/RedesSociais";
 import Sobre from "@/components/Sobre";
+import Cv from "@/components/Cv";
+
 
 
 const Home = () => {
@@ -23,6 +25,7 @@ const Home = () => {
     <>
       <Hero />
       <Sobre />
+      <Cv/>
       <RedesSociais/>
       <Contact />
       <Footer />

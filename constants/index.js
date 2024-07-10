@@ -10,6 +10,11 @@ export const sidebarMenuLinks = [
     sectionId: "about",
   },
   {
+    route: "#cv",
+    label: "currículo",
+    sectionId: "cv",
+  },
+  {
     route: "#redesSociais",
     label: "Redes",
     sectionId: "redesSociais",
