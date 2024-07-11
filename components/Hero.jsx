@@ -16,7 +16,7 @@ const Hero = () => {
 
             </div>
             <p className="mt-5 text-xl">
-            Analista de sistemas, estudante, streamer; Um grande apaixonado pelo mundo da aviação.
+            Analista de sistemas, estudante, streamer; um grande apaixonado pelo mundo da aviação.
             </p>
           </div>  
 
