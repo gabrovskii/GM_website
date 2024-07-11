@@ -16,6 +16,17 @@ const Sobre = () => {
           </p>
     </div>
   <div>
+
+    <div className="mt-5">
+      <p>Olá, bem vindo!</p>
+      <p className="mb-4">Meu nome é Gabriel Menezes, tenho 25 e sou de Manaus, amazonas.</p>
+      <p className="mb-4">Criei esse espaço com o propósito de compartilhar um pouco da minha vida profissinal, meus hobbies e colocar em prática meus conhecimentos em desenvolvimento web.
+      </p>
+      
+    </div>
+
+
+
     <div className="md:grid md:grid-cols-2 ">
       <div className="flex justify-center items-center">
           <div className="mb-5">
