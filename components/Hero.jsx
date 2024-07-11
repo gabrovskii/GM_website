@@ -16,8 +16,7 @@ const Hero = () => {
 
             </div>
             <p className="mt-5 text-xl">
-            Bacharel em ciência da computação, cursando especialização em qualidade e teste de software,
-            com mais de 5 anos de experiência com automação, testes acústicos e teste de software Android.
+            Analista de sistemas, estudante, streamer; Um grande apaixonado pelo mundo da aviação.
             </p>
           </div>  
 
