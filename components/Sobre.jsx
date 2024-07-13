@@ -37,23 +37,23 @@ const Sobre = () => {
 
         <div className="grid grid-cols-5 h-20 justify-center items-center">
           <div className="w-20 bg-gray-200 flex items-center justify-center rounded-lg text-[50px]"> <h1 className="text-dark-blue">6</h1></div>
-          <div className="col-span-4  ml-5">Anos de Experiência com teste e automação de software.</div>
+          <div className="col-span-4 ml-5 md:ml-10">Anos de Experiência com teste e automação de software.</div>
         </div>
 
         <div className="grid grid-cols-5 h-20 justify-center items-center">
           <div className="w-20 bg-gray-200 flex items-center justify-center rounded-lg text-[50px]"> <h1 className="text-dark-blue">+7</h1></div>
-          <div className="col-span-4  ml-5">Estados brasileiros visitados e por volta de 30 cidades conhecidas.</div>
+          <div className="col-span-4 ml-5 md:ml-10">Estados brasileiros visitados e por volta de 30 cidades conhecidas.</div>
         </div>
 
         <div className="grid grid-cols-5 h-20 justify-center items-center">
           <div className="w-20 h-20 bg-gray-200 flex items-center justify-center rounded-lg text-[38px]"> <h1 className="text-dark-blue">230</h1></div>
-          <div className="col-span-4 ml-5">Horas de <a href="https://www.twitch.tv/videos/1230557934"className="font-bold text-black underline"
+          <div className="col-span-4 ml-5 md:ml-10">Horas de <a href="https://www.twitch.tv/videos/1230557934"className="font-bold text-black underline"
           target="_blank" rel="noopener noreferrer">voo</a> em simulador: Airbus a320 neo & TBM930.</div>
         </div>
 
         <div className="grid grid-cols-5 h-20 justify-center items-center">
           <div className="w-20 bg-gray-200 flex items-center justify-center rounded-lg text-[50px]"> <h1 className="text-dark-blue">36</h1></div>
-          <div className="col-span-4 ml-5">Horas de voo com drone, mais de 240 KM explorados e 222 voo efetuados.</div>
+          <div className="col-span-4 ml-5 md:ml-10">Horas de voo com drone, mais de 240 KM explorados e 222 voo efetuados.</div>
         </div>
 
       </div>
