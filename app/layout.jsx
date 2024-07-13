@@ -2,6 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import SideMenu from "@/components/SideMenu";
 import TopMenu from "@/components/TopMenu";
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["100", "400", "700", "800"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
             <TopMenu />
             {children}
           </section>
+          <Analytics />
         </main>
       </body>
     </html>
