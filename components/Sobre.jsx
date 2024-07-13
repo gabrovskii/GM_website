@@ -1,6 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { TbDrone } from "react-icons/tb";
+import { GiAirplane } from "react-icons/gi";
+import { MdGames } from "react-icons/md";
+
+
+
 const Sobre = () => {
   return (
 
@@ -15,67 +21,75 @@ const Sobre = () => {
             Sobre mim
           </p>
     </div>
-  <div>
 
-    <div className="mt-5">
-      <p>Olá, bem vindo!</p>
-      <p className="mb-4">Meu nome é Gabriel Menezes, tenho 25 e sou de Manaus, amazonas.</p>
-      <p className="mb-4">Criei esse espaço com o propósito de compartilhar um pouco da minha vida profissinal, meus hobbies e colocar em prática meus conhecimentos em desenvolvimento web.
-      </p>
-      
-    </div>
+  <article class="text-pretty mt-5 text-justify leadiing-20 text-black ">
+    <h3 className="text-[20px] leadiing-30 pb-5">Olá, bem vindo!</h3>
+    <p className="mb-4 text-[18px]">Meu nome é Gabriel Menezes e sou de Manaus, no Amazonas.</p>
+    <p className="text-[18px]">Criei esse espaço com o propósito de compartilhar um pouco da minha vida profissinal, meus hobbies e colocar em 
+      prática meus conhecimentos em desenvolvimento web.</p>
+  </article>
 
-
-
-    <div className="md:grid md:grid-cols-2 ">
-      <div className="flex justify-center items-center">
-          <div className="mb-5">
-                <p className="mt-6 text-gray-900 text-[20px] leadiing-10">
-                  <b className="ml-5 flex">Mas e fora do trabalho?</b>
-                </p>
-                  <ul class="justify-center items-center mt-1 list-disc list-inside text-[20px] ">
-                    <li>Piloto de drone</li>
-                    <li>Simuleiro de aviação</li>
-                    <li>Streamer</li>
-                    <li>Aventureiro/adoro fazer trilhas</li>
-                    <li>Jogador de vôlei</li>
-                    </ul> 
-                    <p className="mt-6 text-gray-900 text-[20px] leadiing-10">
-                      Ah! e não posso deixar de citar minha 
-                    </p>
-                    <p className=" text-gray-900 text-[20px] leadiing-10">
-                    participação nas melhores comunidades de programação
-                    </p>
-                    <ul class=" justify-center items-center mt-1 list-disc list-inside text-[20px] ">
-                    <li>Python Norte &#128013;</li>
-                    <li>Python Brasil &#x1F1E7;&#x1F1F7;</li>
-                    </ul>
-          </div>
-      </div>
-      <div className="flex justify-center items-center w-full h-fit">
-        <div className="lg:grid md:grid-cols-4 gap-2 m-1 ">
-          <div className="mb-1 lg-mb-0 col-span-2 row-span-2">
-            <Image src="/assets/PB.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
-          </div>
-          <div className="hidden lg:block">
-          <Image src="/assets/drone.JPEG" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
-          </div>
-          <div className="hidden lg:block">
-          <Image src="/assets/drone2.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
-          </div>
-          <div className="col-span-2 row-span-2">
-            <Image src="/assets/PythonNorte.JPG" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
-          </div>
-          <div className="hidden lg:block">
-            <Image src="/assets/GM.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
-          </div>
-          <div className="hidden lg:block">
-          <Image src="/assets/pokemon.JPG" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
-          </div>
-        </div>
-      </div>
-    </div>
+  <div className="grid grid-cols-3 mt-10">
+      <div className="h-20 w-20 bg-gray-200 flex items-center justify-center rounded-lg text-[50px]"> <h1 className="text-dark-blue">6</h1></div>
+      <div className="h-20 col-span-2 ">Anos de Experiência com teste e automação de software.</div>
   </div>
+
+  <div className="grid grid-cols-3 mt-10">
+      <div className="h-20 w-20 bg-gray-200 flex items-center justify-center rounded-lg text-[40px]"> <h1 className="text-dark-blue">+7</h1></div>
+      <div className="h-20 col-span-2 flex justify-center items-center text-[15px] ">Estados brasileiros visitados e por volta de 30 cidades conhecidas.</div>
+  </div>
+
+  <div className="grid grid-cols-3 mt-10">
+      <div className="h-20 w-20 bg-gray-200 flex items-center justify-center rounded-lg text-[38px]"> <h1 className="text-dark-blue">230</h1></div>
+      <div className="h-20 col-span-2 ">Horas de <a
+        href="https://www.twitch.tv/videos/1230557934"
+        className="font-bold text-black underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        voo
+      </a> em simulador: Airbus a320 neo & TBM930.</div>
+  </div>
+
+  <div className="grid grid-cols-3 mt-10">
+      <div className="h-20 w-20 bg-gray-200 flex items-center justify-center rounded-lg text-[40px]"> <h1 className="text-dark-blue">36</h1></div>
+      <div className="h-20 col-span-2 flex justify-center items-center text-[15px]">Horas de voo com drone, mais de 240 KM explorados e 222 voo efetuados.</div>
+  </div>
+
+  <div className="bg-gray-200 w-full h-32 rounded-lg mt-10 flex justify-center items-center">
+    <p className="m-2 text-justify text-[18px] text-blue-950/100 italic">"Sou apaixonado por aviação, um dia ainda me tornarei piloto de avião só para 
+    passear no final de semana"</p>
+  </div>
+
+  <article class="text-pretty mt-5 text-justify leadiing-20 text-black ">
+    <p className="text-[18px]">Como a vida não é feita apenas trabalho, eu tento levar meu dia a dia com tranquilidade, gastando meu tempo com os hobbies
+      que gosto e convivendo com as pessoas que amo.</p>
+    
+    <p className="text-[18px] mt-5">Eu adoro viajar e explorar novos lugares, fazer trilhas, acampar, conhecer novas pessoas e registrar
+      os momentos através da fotografia.</p>
+      
+    <p className="text-[18px] mt-5">Acho que, no final das contas, todos desejam ter experiências para compartilhar e sentir orgulho do que viveram.</p>
+    </article>
+
+    <div className="md:block mt-10">
+      <div className="w-full h-fit grid grid-cols-2 m-2 gap-2 ">
+      <Image src="/assets/PythonNorte.JPG" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+      <Image src="/assets/drone2.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+      </div>
+
+      <div className="w-full h-fit grid grid-cols-2 m-2 gap-2">
+      <Image src="/assets/praia.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+      <Image src="/assets/PB.jpg" width={400} height={400} alt="Gabriel Menezes" className="rounded-lg" />
+      </div>
+    </div>
+    
+
+    
+
+
+
+
+
 </section>
   );
 };
