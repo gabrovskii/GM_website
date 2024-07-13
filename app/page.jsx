@@ -1,4 +1,3 @@
-import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -6,6 +5,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import TopButton from "@/components/TopButton";
 import RedesSociais from "@/components/RedesSociais";
+import SobreBackup from "@/components/SobreBackup";
 import Sobre from "@/components/Sobre";
 import Cv from "@/components/Cv";
 
@@ -25,7 +25,6 @@ const Home = () => {
     <>
       <Hero />
       <Sobre />
-      <Cv/>
       <RedesSociais/>
       <Contact />
       <Footer />

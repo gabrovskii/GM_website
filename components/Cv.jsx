@@ -2,6 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import {GrLinkedin } from 'react-icons/gr'
+import { FaStarOfLife } from "react-icons/fa6";
+import { PiStarFourFill } from "react-icons/pi";
+
 
 const Cv = () => {
   return (
@@ -101,6 +104,28 @@ const Cv = () => {
         </div>
         </div>
     </div>
+
+    <div className="">
+    <p className="text-center font-bold p-5">Voluntáriado</p>
+      <div className="relative space-y-9">
+        {/* Linha branca */}
+        
+        <div className="absolute left-2 top-4 h-9 w-0.5 bg-black" />
+        {/* Bolinhas */}
+        <div className="" /> <PiStarFourFill className="w-4 h-4" />
+
+        <div className="" /> <PiStarFourFill className="w-4 h-4" />
+
+        <div className="" /> <PiStarFourFill className="w-4 h-4" />
+
+        <div className="" /> <PiStarFourFill className="w-4 h-4" />
+
+
+        
+      </div>
+    </div>
+    
+    
    
 </section>
   );

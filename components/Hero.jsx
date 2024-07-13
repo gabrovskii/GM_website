@@ -15,7 +15,7 @@ const Hero = () => {
             <Image src="/assets/home.jpg" width={200} height={200} alt="Gabriel Menezes" className="z-10 rounded-full" />
 
             </div>
-            <p className="mt-5 text-xl">
+            <p className="mt-5 text-xl text-center lg:text-left">
             Analista de sistemas, estudante, streamer; um grande apaixonado pelo mundo da aviação.
             </p>
           </div>  
@@ -35,7 +35,7 @@ const Hero = () => {
       </div>
 
       <div className="hidden lg:flex pl-8 ">
-           <Image src="/assets/home.jpg" width={800} height={800} alt="Gabriel Menezes" className="z-10 rounded-full" />
+           <Image src="/assets/home.jpg" width={400} height={400} alt="Gabriel Menezes" className="z-10 rounded-full" />
       </div>
 
           </div>

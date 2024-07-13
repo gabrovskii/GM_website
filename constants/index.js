@@ -9,11 +9,12 @@ export const sidebarMenuLinks = [
     label: "Sobre",
     sectionId: "about",
   },
+  /*
   {
     route: "#cv",
     label: "currículo",
     sectionId: "cv",
-  },
+  }, */
   {
     route: "#redesSociais",
     label: "Redes",
