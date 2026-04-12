@@ -1,482 +1,757 @@
 <!DOCTYPE html>
 <html class="light" lang="pt-br">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Gabriel Menezes</title>
-    
+
     <!-- External Dependencies -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Manrope:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;900&amp;family=Manrope:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
     <!-- Tailwind Config -->
     <script src="src/js/tailwind-config.js"></script>
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="src/css/styles.css">
-    
+
     <!-- Custom Scripts (Early Load for Dark Mode) -->
     <script src="src/js/scripts.js"></script>
 </head>
-<body class="bg-surface text-on-surface dark:bg-brand-dark dark:text-[#e0e6f1] selection:bg-primary-container dark:selection:bg-slate-700">
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-background/80 dark:bg-brand-dark/80 border-b border-transparent dark:border-white/5 shadow-sm">
-    <div class="flex justify-between items-center max-w-full mx-auto px-8 py-4 w-full relative">
-        <a href="#hero" class="text-xl font-bold tracking-tighter text-slate-800 dark:text-[#e0e6f1] font-headline uppercase hover:opacity-70 transition-opacity">GABRIEL MENEZES</a>
-        <div class="hidden md:flex items-center gap-8">
-            <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative" href="#hero">
-                <span data-lang-content="pt">Início</span>
-                <span data-lang-content="en">Home</span>
-                <span class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
-            </a>
-            <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative" href="#experience">
-                <span data-lang-content="pt">Experiência</span>
-                <span data-lang-content="en">Experience</span>
-                <span class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
-            </a>
-            <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative" href="#journey">
-                <span data-lang-content="pt">Comunidade</span>
-                <span data-lang-content="en">Community</span>
-                <span class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
-            </a>
-            <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative" href="#lifestyle">
-                <span data-lang-content="pt">Registros</span>
-                <span data-lang-content="en">Records</span>
-                <span class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
-            </a>
-            <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative" href="#social">
-                <span data-lang-content="pt">Contatos</span>
-                <span data-lang-content="en">Contacts</span>
-                <span class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
-            </a>
-        </div>
-        <div class="flex items-center gap-2">
-            <!-- Language Toggle -->
-            <button id="lang-toggle" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all border border-slate-200 dark:border-white/10">
-                <span class="material-symbols-outlined text-sm text-primary dark:text-brand-accent">language</span>
-                <span class="font-label text-xs font-bold text-slate-700 dark:text-[#a5abb6] uppercase">
-                    <span data-lang-content="pt">PT</span>
-                    <span data-lang-content="en">EN</span>
-                </span>
-            </button>
-            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all">
-                <span class="material-symbols-outlined text-primary dark:text-brand-accent">contrast</span>
-            </button>
-        </div>
-    </div>
-</nav>
+<body
+    class="bg-surface text-on-surface dark:bg-brand-dark dark:text-[#e0e6f1] selection:bg-primary-container dark:selection:bg-slate-700">
 
-<main class="pt-24">
-    <!-- Hero Section -->
-    <section class="relative min-h-[819px] flex items-center px-8 mx-auto max-w-6xl" id="hero">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center w-full">
-            <div class="md:col-span-7 z-10 flex flex-col items-start justify-center">
-                <span class="font-label text-xs uppercase tracking-widest text-primary dark:text-brand-accent mb-4 block font-bold">
-                    <span data-lang-content="pt">Especialista em Qualidade &amp; teste de software</span>
-                    <span data-lang-content="en">Software Quality &amp; Testing Specialist</span>
-                </span>
-                <h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-on-surface dark:text-white mb-8">
-                    <span class="text-primary-dim dark:text-brand-accent">Gabriel</span>
-                    <div>Menezes</div>
-                </h1>
-                <p class="font-body text-xl text-secondary dark:text-slate-300 mb-10 leading-relaxed max-w-xl">
-                    <span data-lang-content="pt">Especialista em <b>teste de software</b> e colaborador da comunidade Python no Brasil, vivo o equilíbrio entre a precisão técnica e o ar livre. Sou um entusiasta de trilhas e da fotografia aérea.</span>
-                    <span data-lang-content="en">Specialist in <b>software testing</b> and contributor to the Python community in Brazil, I live the balance between technical precision and the outdoors. I'm a hiking and aerial photography enthusiast.</span>
-                </p>
-                <div class="flex gap-4">
-                    <button class="bg-primary dark:bg-brand-accent text-on-primary dark:text-brand-dark px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/10">
-                        <span data-lang-content="pt">Portfólio</span>
-                        <span data-lang-content="en">Portfolio</span>
-                    </button>
-                    <button class="bg-primary-container dark:bg-[#1b2027] text-on-primary-container dark:text-[#e0e6f1] px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest hover:bg-primary-fixed-dim dark:hover:bg-[#2c333d] transition-all">
-                        <span data-lang-content="pt">Contato</span>
-                        <span data-lang-content="en">Contact</span>
-                    </button>
-                </div>
-            </div>
-            <div class="md:col-span-5 relative">
-                <div class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high dark:bg-[#111418] relative group border dark:border-white/5">
-                    <img alt="Perspectiva Aérea" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" src="src/assets/images/hero.jpg"/>
-                    <div class="absolute bottom-6 left-6 glass-overlay p-4 rounded-lg">
-                        <span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant dark:text-slate-400 block mb-1">
-                            <span data-lang-content="pt">ID do Voo</span>
-                            <span data-lang-content="en">Flight ID</span>
-                        </span>
-                        <span class="font-label text-sm font-bold text-primary dark:text-brand-accent">HZ-2024-ALPHA</span>
-                    </div>
-                </div>
-                <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container/30 dark:bg-brand-accent/10 rounded-full blur-3xl -z-10"></div>
-            </div>
-            <div class="col-span-full mt-12 w-full">
-                <div class="max-w-3xl mx-auto">
-                    <iframe class="spotify-embed" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" data-testid="embed-iframe" frameborder="0" height="152" loading="lazy" src="https://open.spotify.com/embed/playlist/696ALwWYYnyTI1NFxEnQJN?utm_source=generator&amp;theme=0" width="100%"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional Experience Section -->
-    <section class="py-24 px-8 bg-surface dark:bg-brand-dark" id="experience">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-headline text-4xl font-black text-on-surface dark:text-white mb-4 uppercase tracking-tighter">
-                    <span data-lang-content="pt">Experiência Profissional</span>
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 backdrop-blur-xl bg-background/80 dark:bg-brand-dark/80 border-b border-transparent dark:border-white/5 shadow-sm">
+        <div class="flex justify-between items-center max-w-full mx-auto px-8 py-4 w-full relative">
+            <a href="#hero"
+                class="text-xl font-bold tracking-tighter text-slate-800 dark:text-[#e0e6f1] font-headline uppercase hover:opacity-70 transition-opacity">GABRIEL
+                MENEZES</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative"
+                    href="#hero">
+                    <span data-lang-content="pt">Início</span>
+                    <span data-lang-content="en">Home</span>
+                    <span
+                        class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
+                </a>
+                <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative"
+                    href="#experience">
+                    <span data-lang-content="pt">Experiência</span>
                     <span data-lang-content="en">Experience</span>
-                </h2>
-                <div class="w-16 h-1 bg-primary dark:bg-brand-accent mx-auto rounded-full"></div>
+                    <span
+                        class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
+                </a>
+                <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative"
+                    href="#journey">
+                    <span data-lang-content="pt">Comunidade</span>
+                    <span data-lang-content="en">Community</span>
+                    <span
+                        class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
+                </a>
+                <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative"
+                    href="#lifestyle">
+                    <span data-lang-content="pt">Registros</span>
+                    <span data-lang-content="en">Records</span>
+                    <span
+                        class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
+                </a>
+                <a class="nav-link text-slate-500 dark:text-[#a5abb6] font-medium font-headline tracking-tight hover:text-primary dark:hover:text-[#e0e6f1] transition-colors duration-300 flex flex-col items-center relative"
+                    href="#social">
+                    <span data-lang-content="pt">Contatos</span>
+                    <span data-lang-content="en">Contacts</span>
+                    <span
+                        class="active-dot absolute -bottom-2 w-1 h-1 bg-primary dark:bg-brand-accent rounded-full opacity-0 transition-opacity"></span>
+                </a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start mb-24">
-                <div class="md:col-span-5">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
-                            <img alt="Python Evento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="src/assets/images/exp1.jpg"/>
-                        </div>
-                        <div class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
-                            <img alt="Python Evento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="src/assets/images/exp2.jpg"/>
-                        </div>
-                        <div class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
-                            <img alt="Python Evento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="src/assets/images/exp3.jpg"/>
-                        </div>
-                        <div class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
-                            <img alt="Python Evento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="src/assets/images/exp4.jpg"/>
-                        </div>
+            <div class="flex items-center gap-2">
+                <!-- Language Toggle -->
+                <button id="lang-toggle"
+                    class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all border border-slate-200 dark:border-white/10">
+                    <span class="material-symbols-outlined text-sm text-primary dark:text-brand-accent">language</span>
+                    <span class="font-label text-xs font-bold text-slate-700 dark:text-[#a5abb6] uppercase">
+                        <span data-lang-content="pt">PT</span>
+                        <span data-lang-content="en">EN</span>
+                    </span>
+                </button>
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all">
+                    <span class="material-symbols-outlined text-primary dark:text-brand-accent">contrast</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="relative min-h-[819px] flex items-center px-8 mx-auto max-w-6xl" id="hero">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center w-full">
+                <div class="md:col-span-7 z-10 flex flex-col items-start justify-center">
+                    <span
+                        class="font-label text-xs uppercase tracking-widest text-primary dark:text-brand-accent mb-4 block font-bold">
+                        <span data-lang-content="pt">Especialista em Qualidade &amp; teste de software</span>
+                        <span data-lang-content="en">Software Quality &amp; Testing Specialist</span>
+                    </span>
+                    <h1
+                        class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] text-on-surface dark:text-white mb-8">
+                        <span class="text-primary-dim dark:text-brand-accent">Gabriel</span>
+                        <div>Menezes</div>
+                    </h1>
+                    <p class="font-body text-xl text-secondary dark:text-slate-300 mb-10 leading-relaxed max-w-xl">
+                        <span data-lang-content="pt">Especialista em <b>teste de software</b> e colaborador da
+                            comunidade Python no Brasil, vivo o equilíbrio entre a precisão técnica e o ar livre. Sou um
+                            entusiasta de trilhas e da fotografia aérea.</span>
+                        <span data-lang-content="en">Specialist in <b>software testing</b> and contributor to the Python
+                            community in Brazil, I live the balance between technical precision and the outdoors. I'm a
+                            hiking and aerial photography enthusiast.</span>
+                    </p>
+                    <div class="flex gap-4">
+                        <button
+                            class="bg-primary dark:bg-brand-accent text-on-primary dark:text-brand-dark px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/10">
+                            <span data-lang-content="pt">Portfólio</span>
+                            <span data-lang-content="en">Portfolio</span>
+                        </button>
+                        <button
+                            class="bg-primary-container dark:bg-[#1b2027] text-on-primary-container dark:text-[#e0e6f1] px-8 py-4 rounded-xl font-label text-sm uppercase tracking-widest hover:bg-primary-fixed-dim dark:hover:bg-[#2c333d] transition-all">
+                            <span data-lang-content="pt">Contato</span>
+                            <span data-lang-content="en">Contact</span>
+                        </button>
                     </div>
                 </div>
-                <div class="md:col-span-7">
-                    <div class="space-y-6">
-                        <p class="font-body text-lg text-secondary dark:text-slate-300 leading-relaxed">
-                            <span data-lang-content="pt">Sou graduado em Ciência da Computação e <span class="text-primary dark:text-brand-accent font-bold">Especialista em Qualidade de Software</span>. Com uma trajetória de 7 anos no <span class="font-bold">INDT/Motorola</span>, desenvolvi um olhar crítico para a excelência técnica, unindo rigor analítico à paixão pela tecnologia.</span>
-                            <span data-lang-content="en">I'm a Computer Science graduate and <span class="text-primary dark:text-brand-accent font-bold">Software Quality Specialist</span>. With a 7-year career at <span class="font-bold">INDT/Motorola</span>, I developed a critical eye for technical excellence, merging analytical rigor with a passion for technology.</span>
-                        </p>
-                        <p class="font-body text-lg text-secondary dark:text-slate-300 leading-relaxed">
-                            <span data-lang-content="pt">Minha atuação foca em transformar processos complexos em fluxos eficientes. Do laboratório de testes acústicos à automação de dispositivos móveis, busco a clareza estrutural em cada linha de código.</span>
-                            <span data-lang-content="en">My focus is on transforming complex processes into efficient workflows. From acoustic test labs to mobile device automation, I seek structural clarity in every line of code.</span>
-                        </p>
+                <div class="md:col-span-5 relative">
+                    <div
+                        class="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high dark:bg-[#111418] relative group border dark:border-white/5">
+                        <img alt="Perspectiva Aérea"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                            src="src/assets/images/hero.jpg" />
+                        <div class="absolute bottom-6 left-6 glass-overlay p-4 rounded-lg">
+                            <span
+                                class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant dark:text-slate-400 block mb-1">
+                                <span data-lang-content="pt">ID do Voo</span>
+                                <span data-lang-content="en">Flight ID</span>
+                            </span>
+                            <span
+                                class="font-label text-sm font-bold text-primary dark:text-brand-accent">HZ-2024-ALPHA</span>
+                        </div>
                     </div>
-                    <div class="mt-10 grid grid-cols-3 gap-6">
-                        <div class="flex flex-col gap-2">
-                            <span class="font-headline text-2xl font-black text-primary dark:text-brand-accent">
-                                <span data-lang-content="pt">5+ Anos</span>
-                                <span data-lang-content="en">5+ Years</span>
-                            </span>
-                            <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400">INDT/Motorola</span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <span class="font-headline text-2xl font-black text-primary dark:text-brand-accent">QA Spec</span>
-                            <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400">
-                                <span data-lang-content="pt">Qualidade de Software</span>
-                                <span data-lang-content="en">Software Quality</span>
-                            </span>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <span class="font-headline text-2xl font-black text-primary dark:text-brand-accent">CS Grad</span>
-                            <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400">
-                                <span data-lang-content="pt">Ciência da Computação</span>
-                                <span data-lang-content="en">Computer Science</span>
-                            </span>
-                        </div>
+                    <div
+                        class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container/30 dark:bg-brand-accent/10 rounded-full blur-3xl -z-10">
+                    </div>
+                </div>
+                <div class="col-span-full mt-12 w-full">
+                    <div class="max-w-3xl mx-auto">
+                        <iframe class="spotify-embed"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            allowfullscreen="" data-testid="embed-iframe" frameborder="0" height="152" loading="lazy"
+                            src="https://open.spotify.com/embed/playlist/696ALwWYYnyTI1NFxEnQJN?utm_source=generator&amp;theme=0"
+                            width="100%"></iframe>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <!-- Timeline -->
-                <div class="lg:col-span-8 space-y-8 relative">
-                    <div class="absolute left-6 top-0 bottom-0 w-px bg-slate-200 dark:bg-white/10"></div>
-                    <!-- Item 1 -->
-                    <div class="relative pl-16 group">
-                        <div class="absolute left-4 top-2 w-4 h-4 rounded-full border-4 border-surface dark:border-brand-dark bg-primary dark:bg-brand-accent group-hover:scale-125 transition-transform z-10"></div>
-                        <div class="bg-surface dark:bg-[#111418] p-6 rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-headline font-bold text-on-surface dark:text-white">
-                                    <span data-lang-content="pt">Desenvolvedor Pleno</span>
-                                    <span data-lang-content="en">Mid-Level Software Developer</span>
-                                </h3>
-                                <span class="font-label text-[10px] font-bold text-primary dark:text-brand-accent uppercase">
-                                    <span data-lang-content="pt">2021 - Presente</span>
-                                    <span data-lang-content="en">2021 - Present</span>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section class="py-24 px-8 bg-surface dark:bg-brand-dark" id="experience">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-headline text-4xl font-black text-on-surface dark:text-white mb-4 uppercase tracking-tighter">
+                        <span data-lang-content="pt">Experiência Profissional</span>
+                        <span data-lang-content="en">Experience</span>
+                    </h2>
+                    <div class="w-16 h-1 bg-primary dark:bg-brand-accent mx-auto rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start mb-24">
+                    <div class="md:col-span-5">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
+                                <img alt="Python Evento"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="src/assets/images/exp1.jpg" />
+                            </div>
+                            <div
+                                class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
+                                <img alt="Python Evento"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="src/assets/images/exp2.jpg" />
+                            </div>
+                            <div
+                                class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
+                                <img alt="Python Evento"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="src/assets/images/exp3.jpg" />
+                            </div>
+                            <div
+                                class="aspect-square rounded-xl overflow-hidden bg-surface-container dark:bg-[#1b2027] shadow-sm group">
+                                <img alt="Python Evento"
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="src/assets/images/exp4.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7">
+                        <div class="space-y-6">
+                            <p class="font-body text-lg text-secondary dark:text-slate-300 leading-relaxed">
+                                <span data-lang-content="pt">Sou graduado em Ciência da Computação e <span
+                                        class="text-primary dark:text-brand-accent font-bold">Especialista em Qualidade
+                                        de Software</span>. Com uma trajetória de 7 anos no <span
+                                        class="font-bold">INDT/Motorola</span>, desenvolvi um olhar crítico para a
+                                    excelência técnica, unindo rigor analítico à paixão pela tecnologia.</span>
+                                <span data-lang-content="en">I'm a Computer Science graduate and <span
+                                        class="text-primary dark:text-brand-accent font-bold">Software Quality
+                                        Specialist</span>. With a 7-year career at <span
+                                        class="font-bold">INDT/Motorola</span>, I developed a critical eye for technical
+                                    excellence, merging analytical rigor with a passion for technology.</span>
+                            </p>
+                            <p class="font-body text-lg text-secondary dark:text-slate-300 leading-relaxed">
+                                <span data-lang-content="pt">Minha atuação foca em transformar processos complexos em
+                                    fluxos eficientes. Do laboratório de testes acústicos à automação de dispositivos
+                                    móveis, busco a clareza estrutural em cada linha de código.</span>
+                                <span data-lang-content="en">My focus is on transforming complex processes into
+                                    efficient workflows. From acoustic test labs to mobile device automation, I seek
+                                    structural clarity in every line of code.</span>
+                            </p>
+                        </div>
+                        <div class="mt-10 grid grid-cols-3 gap-6">
+                            <div class="flex flex-col gap-2">
+                                <span class="font-headline text-2xl font-black text-primary dark:text-brand-accent">
+                                    <span data-lang-content="pt">5+ Anos</span>
+                                    <span data-lang-content="en">5+ Years</span>
+                                </span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400">INDT/Motorola</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <span class="font-headline text-2xl font-black text-primary dark:text-brand-accent">QA
+                                    Spec</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400">
+                                    <span data-lang-content="pt">Qualidade de Software</span>
+                                    <span data-lang-content="en">Software Quality</span>
                                 </span>
                             </div>
-                            <p class="text-sm text-secondary dark:text-slate-300 mb-4">INDT / Motorola</p>
-                            <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">
-                                <span data-lang-content="pt">Liderança técnica em automação de testes móveis e coordenação de equipes globais.</span>
-                                <span data-lang-content="en">Technical leadership in mobile test automation and coordination of global teams.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="relative pl-16 group">
-                        <div class="absolute left-4 top-2 w-4 h-4 rounded-full border-4 border-surface dark:border-brand-dark bg-slate-400 dark:bg-[#424851] group-hover:bg-primary dark:group-hover:bg-brand-accent group-hover:scale-125 transition-all z-10"></div>
-                        <div class="bg-surface dark:bg-[#111418] p-6 rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-headline font-bold text-on-surface dark:text-white">
-                                    <span data-lang-content="pt">Desenvolvedor Júnior</span>
-                                    <span data-lang-content="en">Junior Developer</span>
-                                </h3>
-                                <span class="font-label text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">2020 - 2021</span>
+                            <div class="flex flex-col gap-2">
+                                <span class="font-headline text-2xl font-black text-primary dark:text-brand-accent">CS
+                                    Grad</span>
+                                <span
+                                    class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400">
+                                    <span data-lang-content="pt">Ciência da Computação</span>
+                                    <span data-lang-content="en">Computer Science</span>
+                                </span>
                             </div>
-                            <p class="text-sm text-secondary dark:text-slate-300 mb-4">INDT / Motorola</p>
-                            <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">
-                                <span data-lang-content="pt">Foco em testes acústicos e scripts de automação em Python e Java para firmware.</span>
-                                <span data-lang-content="en">Focused on acoustic testing and automation scripts in Python and Java for firmware.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="relative pl-16 group">
-                        <div class="absolute left-4 top-2 w-4 h-4 rounded-full border-4 border-surface dark:border-brand-dark bg-slate-400 dark:bg-[#424851] group-hover:bg-primary dark:group-hover:bg-brand-accent group-hover:scale-125 transition-all z-10"></div>
-                        <div class="bg-surface dark:bg-[#111418] p-6 rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
-                            <div class="flex justify-between items-start mb-2">
-                                <h3 class="font-headline font-bold text-on-surface dark:text-white">
-                                    <span data-lang-content="pt">Trainee de Desenvolvimento</span>
-                                    <span data-lang-content="en">Software Developer Trainee</span>
-                                </h3>
-                                <span class="font-label text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">2019 - 2020</span>
-                            </div>
-                            <p class="text-sm text-secondary dark:text-slate-300 mb-4">INDT / Motorola</p>
-                            <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">
-                                <span data-lang-content="pt">Aprimoramento técnico em Android Embedded e certificações Anatel.</span>
-                                <span data-lang-content="en">Technical skills development in Android Embedded and Anatel certifications.</span>
-                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- Skills & Certs -->
-                <div class="lg:col-span-4 space-y-8">
-                    <div class="p-8 bg-surface dark:bg-[#111418] rounded-xl border border-slate-100 dark:border-white/5">
-                        <h4 class="font-headline font-bold mb-6 flex items-center gap-2 text-on-surface dark:text-white">
-                            <span class="material-symbols-outlined text-primary dark:text-brand-accent">terminal</span>
-                            <span data-lang-content="pt">Stack Técnica</span>
-                            <span data-lang-content="en">Technical Stack</span>
-                        </h4>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Python</span>
-                            <span class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Java</span>
-                            <span class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Android</span>
-                            <span class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">UI Automator</span>
-                            <span class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">GitLab</span>
-                            <span class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Jenkins</span>
-                        </div>
-                    </div>
-                    <div class="p-8 bg-primary dark:bg-[#1b2027] text-on-primary dark:text-brand-accent rounded-xl shadow-md border dark:border-white/5">
-                        <h4 class="font-headline font-bold mb-6 flex items-center gap-2 text-white dark:text-brand-accent">
-                            <span class="material-symbols-outlined">verified</span>
-                            <span data-lang-content="pt">Certificações</span>
-                            <span data-lang-content="en">Certifications</span>
-                        </h4>
-                        <ul class="space-y-4">
-                            <li class="flex items-start gap-3">
-                                <span class="material-symbols-outlined text-sm mt-1 text-white dark:text-brand-accent">check_circle</span>
-                                <p class="text-sm font-bold text-white dark:text-[#e0e6f1]">Scrum Foundation Professional</p>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="material-symbols-outlined text-sm mt-1 text-white dark:text-brand-accent">check_circle</span>
-                                <p class="text-sm font-bold text-white dark:text-[#e0e6f1]">
-                                    <span data-lang-content="pt">Especialista em Qualidade (IFAM)</span>
-                                    <span data-lang-content="en">Quality Specialist (IFAM)</span>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Timeline -->
+                    <div class="lg:col-span-8 space-y-8 relative">
+                        <div class="absolute left-6 top-0 bottom-0 w-px bg-slate-200 dark:bg-white/10"></div>
+                        <!-- Item 1 -->
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-4 top-2 w-4 h-4 rounded-full border-4 border-surface dark:border-brand-dark bg-primary dark:bg-brand-accent group-hover:scale-125 transition-transform z-10">
+                            </div>
+                            <div
+                                class="bg-surface dark:bg-[#111418] p-6 rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-headline font-bold text-on-surface dark:text-white">
+                                        <span data-lang-content="pt">Desenvolvedor Pleno</span>
+                                        <span data-lang-content="en">Mid-Level Software Developer</span>
+                                    </h3>
+                                    <span
+                                        class="font-label text-[10px] font-bold text-primary dark:text-brand-accent uppercase">
+                                        <span data-lang-content="pt">2021 - Presente</span>
+                                        <span data-lang-content="en">2021 - Present</span>
+                                    </span>
+                                </div>
+                                <p class="text-sm text-secondary dark:text-slate-300 mb-4">INDT / Motorola</p>
+                                <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">
+                                    <span data-lang-content="pt">Liderança técnica em automação de testes móveis e
+                                        coordenação de equipes globais.</span>
+                                    <span data-lang-content="en">Technical leadership in mobile test automation and
+                                        coordination of global teams.</span>
                                 </p>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-4 top-2 w-4 h-4 rounded-full border-4 border-surface dark:border-brand-dark bg-slate-400 dark:bg-[#424851] group-hover:bg-primary dark:group-hover:bg-brand-accent group-hover:scale-125 transition-all z-10">
+                            </div>
+                            <div
+                                class="bg-surface dark:bg-[#111418] p-6 rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-headline font-bold text-on-surface dark:text-white">
+                                        <span data-lang-content="pt">Desenvolvedor Júnior</span>
+                                        <span data-lang-content="en">Junior Developer</span>
+                                    </h3>
+                                    <span
+                                        class="font-label text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">2020
+                                        - 2021</span>
+                                </div>
+                                <p class="text-sm text-secondary dark:text-slate-300 mb-4">INDT / Motorola</p>
+                                <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">
+                                    <span data-lang-content="pt">Foco em testes acústicos e scripts de automação em
+                                        Python e Java para firmware.</span>
+                                    <span data-lang-content="en">Focused on acoustic testing and automation scripts in
+                                        Python and Java for firmware.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="relative pl-16 group">
+                            <div
+                                class="absolute left-4 top-2 w-4 h-4 rounded-full border-4 border-surface dark:border-brand-dark bg-slate-400 dark:bg-[#424851] group-hover:bg-primary dark:group-hover:bg-brand-accent group-hover:scale-125 transition-all z-10">
+                            </div>
+                            <div
+                                class="bg-surface dark:bg-[#111418] p-6 rounded-xl border border-slate-100 dark:border-white/5 shadow-sm">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-headline font-bold text-on-surface dark:text-white">
+                                        <span data-lang-content="pt">Trainee de Desenvolvimento</span>
+                                        <span data-lang-content="en">Software Developer Trainee</span>
+                                    </h3>
+                                    <span
+                                        class="font-label text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">2019
+                                        - 2020</span>
+                                </div>
+                                <p class="text-sm text-secondary dark:text-slate-300 mb-4">INDT / Motorola</p>
+                                <p class="text-sm text-secondary dark:text-slate-400 leading-relaxed">
+                                    <span data-lang-content="pt">Aprimoramento técnico em Android Embedded e
+                                        certificações Anatel.</span>
+                                    <span data-lang-content="en">Technical skills development in Android Embedded and
+                                        Anatel certifications.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Skills & Certs -->
+                    <div class="lg:col-span-4 space-y-8">
+                        <div
+                            class="p-8 bg-surface dark:bg-[#111418] rounded-xl border border-slate-100 dark:border-white/5">
+                            <h4
+                                class="font-headline font-bold mb-6 flex items-center gap-2 text-on-surface dark:text-white">
+                                <span
+                                    class="material-symbols-outlined text-primary dark:text-brand-accent">terminal</span>
+                                <span data-lang-content="pt">Stack Técnica</span>
+                                <span data-lang-content="en">Technical Stack</span>
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Java</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Android</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">UI
+                                    Automator</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">GitLab</span>
+                                <span
+                                    class="px-3 py-1 bg-surface-container dark:bg-[#1b2027] text-xs font-bold rounded-full dark:text-[#a5abb6]">Jenkins</span>
+                            </div>
+                        </div>
+                        <div
+                            class="p-8 bg-primary dark:bg-[#1b2027] text-on-primary dark:text-brand-accent rounded-xl shadow-md border dark:border-white/5">
+                            <h4
+                                class="font-headline font-bold mb-6 flex items-center gap-2 text-white dark:text-brand-accent">
+                                <span class="material-symbols-outlined">verified</span>
+                                <span data-lang-content="pt">Certificações</span>
+                                <span data-lang-content="en">Certifications</span>
+                            </h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-sm mt-1 text-white dark:text-brand-accent">check_circle</span>
+                                    <p class="text-sm font-bold text-white dark:text-[#e0e6f1]">Scrum Foundation
+                                        Professional</p>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span
+                                        class="material-symbols-outlined text-sm mt-1 text-white dark:text-brand-accent">check_circle</span>
+                                    <p class="text-sm font-bold text-white dark:text-[#e0e6f1]">
+                                        <span data-lang-content="pt">Especialista em Qualidade (IFAM)</span>
+                                        <span data-lang-content="en">Quality Specialist (IFAM)</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Technical Journey & Events Section -->
-    <section class="py-24 px-6 bg-surface-container-low dark:bg-[#0c0e11]/50" id="journey">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-headline text-4xl font-black text-on-surface dark:text-white mb-4 uppercase tracking-tighter">
-                    <span data-lang-content="pt">Comunidade &amp; Conhecimento</span>
-                    <span data-lang-content="en">Community &amp; Insights</span>
-                </h2>
-                <div class="w-16 h-1 bg-primary dark:bg-brand-accent mx-auto rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="space-y-4">
-                    <h3 class="font-headline text-xl font-bold mb-6 text-primary dark:text-brand-accent">
-                        <span data-lang-content="pt">Engajamento</span>
-                        <span data-lang-content="en">Engagement</span>
-                    </h3>
-                    <div class="bg-surface dark:bg-[#111418] p-5 rounded-xl border border-slate-100 dark:border-white/5 flex items-center gap-4 hover:border-primary/30 dark:hover:border-brand-accent/30 transition-colors">
-                        <span class="material-symbols-outlined text-primary dark:text-brand-accent">groups</span>
-                        <div>
-                            <p class="font-bold text-on-surface dark:text-white">Python Sul 2025</p>
-                            <p class="font-label text-[10px] text-secondary dark:text-slate-400 uppercase tracking-wider">
-                                <span data-lang-content="pt">Palestrante Selecionado</span>
-                                <span data-lang-content="en">Selected Speaker</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="bg-surface dark:bg-[#111418] p-5 rounded-xl border border-slate-100 dark:border-white/5 flex items-center gap-4 hover:border-primary/30 dark:hover:border-brand-accent/30 transition-colors">
-                        <span class="material-symbols-outlined text-primary dark:text-brand-accent">visibility</span>
-                        <div>
-                            <p class="font-bold text-on-surface dark:text-white">Python Brasil 2024</p>
-                            <p class="font-label text-[10px] text-secondary dark:text-slate-400 uppercase tracking-wider">
-                                <span data-lang-content="pt">Participante Ativo</span>
-                                <span data-lang-content="en">Active Participant</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="font-headline text-xl font-bold mb-6 text-primary dark:text-brand-accent">
-                        <span data-lang-content="pt">Iniciativas</span>
-                        <span data-lang-content="en">Initiatives</span>
-                    </h3>
-                    <div class="bg-surface dark:bg-[#111418] p-5 rounded-xl border border-slate-100 dark:border-white/5 flex items-center gap-4 hover:border-primary/30 dark:hover:border-brand-accent/30 transition-colors">
-                        <span class="material-symbols-outlined text-primary dark:text-brand-accent">stars</span>
-                        <div>
-                            <p class="font-bold text-on-surface dark:text-white">Python Norte 2023</p>
-                            <p class="font-label text-[10px] text-secondary dark:text-slate-400 uppercase tracking-wider">Big Kahunna</p>
-                        </div>
-                    </div>
-                    <div class="p-8 bg-primary-container dark:bg-[#1b2027] rounded-xl mt-6 border dark:border-white/5">
-                        <p class="text-sm font-medium italic text-primary dark:text-brand-accent">
-                            <span data-lang-content="pt">"Construindo pontes entre a qualidade técnica e a colaboração open source."</span>
-                            <span data-lang-content="en">"Building bridges between technical quality and open source collaboration."</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hobbies & Lifestyle Section -->
-    <section class="py-24 px-8 bg-surface dark:bg-brand-dark overflow-hidden" id="lifestyle">
-        <div class="max-w-7xl mx-auto relative">
-            <!-- Decorative background elements -->
-            <div class="absolute top-0 right-0 w-64 h-64 technical-grid text-primary/5 dark:text-brand-accent/5 -mr-32 -mt-32"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-1 text-primary/20 dark:text-brand-accent/20 border-b border-dashed"></div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-12 items-center">
-                <div class="lg:col-span-5 relative z-10">
-                    <span class="font-label text-xs uppercase tracking-widest text-primary dark:text-brand-accent mb-4 block font-bold">Analytical Vision</span>
-                    <h2 class="font-headline text-4xl font-black text-on-surface dark:text-white mb-6 tracking-tighter uppercase leading-none">
-                        <span data-lang-content="pt">Perspectivas: <span class="text-primary dark:text-brand-accent">Onde o Código encontra o Horizonte.</span></span>
-                        <span data-lang-content="en">Perspectives: <span class="text-primary dark:text-brand-accent">Where Code meets the Horizon.</span></span>
+        </section>
+        <!-- Technical Journey & Events Section -->
+        <section class="py-24 px-6 bg-surface-container-low dark:bg-[#0c0e11]/50" id="journey">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-headline text-4xl font-black text-on-surface dark:text-white mb-4 uppercase tracking-tighter">
+                        <span data-lang-content="pt">Comunidade &amp; Conhecimento</span>
+                        <span data-lang-content="en">Community &amp; Insights</span>
                     </h2>
-                    <div class="space-y-6">
-                        <p class="font-body text-lg text-secondary dark:text-slate-300 leading-relaxed border-l-2 border-primary/20 dark:border-brand-accent/20 pl-6">
-                            <span data-lang-content="pt">A fotografia com drones é minha extensão analítica fora do terminal. Capturar geometrias urbanas a 400 pés exige a mesma precisão técnica e planejamento rigoroso que aplico na análise de sistemas complexos. Cada voo é um teste de estabilidade, perspective e criatividade.</span>
-                            <span data-lang-content="en">Drone photography is my analytical extension outside the terminal. Capturing urban geometries at 400 feet requires the same precision and rigorous planning I apply to complex system analysis. Each flight is a test of stability, perspective, and creativity.</span>
-                        </p>
-                        <div class="flex items-center gap-6 mt-12">
-                            <div class="flex gap-2">
-                                <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-[#1b2027] border border-slate-200 dark:border-white/10 text-primary dark:text-brand-accent hover:bg-primary hover:text-white dark:hover:bg-brand-accent dark:hover:text-brand-dark transition-all shadow-sm" onclick="document.getElementById('lifestyle-gallery').scrollBy({left: -400, behavior: 'smooth'})">
-                                    <span class="material-symbols-outlined">west</span>
-                                </button>
-                                <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-[#1b2027] border border-slate-200 dark:border-white/10 text-primary dark:text-brand-accent hover:bg-primary hover:text-white dark:hover:bg-brand-accent dark:hover:text-brand-dark transition-all shadow-sm" onclick="document.getElementById('lifestyle-gallery').scrollBy({left: 400, behavior: 'smooth'})">
-                                    <span class="material-symbols-outlined">east</span>
-                                </button>
+                    <div class="w-16 h-1 bg-primary dark:bg-brand-accent mx-auto rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="col-span-1 md:col-span-2 space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Event 1: Python Brasil 2022 -->
+                            <div
+                                class="bg-white dark:bg-slate-700/50 p-6 rounded-xl border border-slate-100 dark:border-slate-600 flex flex-col gap-4 hover:shadow-md transition-shadow group">
+                                <div class="flex items-center justify-between">
+                                    <span class="material-symbols-outlined text-[#B5C7EB]">volunteer_activism</span>
+                                    <span
+                                        class="font-label text-[10px] text-slate-400 uppercase tracking-widest">2022</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-on-surface dark:text-white">Python Brasil 2022</h4>
+                                    <p class="text-xs text-secondary dark:text-slate-400">
+                                        <span data-lang-content="pt">Manaus — Voluntário</span>
+                                        <span data-lang-content="en">Manaus — Volunteer</span>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="h-px flex-grow bg-slate-200 dark:bg-white/10 relative">
-                                <div class="absolute right-0 -top-2 font-label text-[8px] uppercase tracking-tighter text-outline dark:text-slate-500">Slide 01-03 // Active</div>
+                            <!-- Event 2: Python Norte 2023 -->
+                            <div
+                                class="bg-white dark:bg-slate-700/50 p-6 rounded-xl border border-slate-100 dark:border-slate-600 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-center justify-between">
+                                    <span class="material-symbols-outlined text-[#B5C7EB]">stars</span>
+                                    <span
+                                        class="font-label text-[10px] text-slate-400 uppercase tracking-widest">2023</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-on-surface dark:text-white">Python Norte 2023</h4>
+                                    <p class="text-xs text-secondary dark:text-slate-400">
+                                        <span data-lang-content="pt">Manaus — Big Kahuna</span>
+                                        <span data-lang-content="en">Manaus — Big Kahuna</span>
+                                    </p>
+                                </div>
                             </div>
+                            <!-- Event 3: PyData Manaus 2023 -->
+                            <div
+                                class="bg-white dark:bg-slate-700/50 p-6 rounded-xl border border-slate-100 dark:border-slate-600 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-center justify-between">
+                                    <span class="material-symbols-outlined text-[#B5C7EB]">mic</span>
+                                    <span
+                                        class="font-label text-[10px] text-slate-400 uppercase tracking-widest">2023</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-on-surface dark:text-white">PyData Manaus 2023</h4>
+                                    <p class="text-xs text-secondary dark:text-slate-400">
+                                        <span data-lang-content="pt">Manaus — Palestrante</span>
+                                        <span data-lang-content="en">Manaus — Speaker</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Event 4: Python Norte 2024 -->
+                            <div
+                                class="bg-white dark:bg-slate-700/50 p-6 rounded-xl border border-slate-100 dark:border-slate-600 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-center justify-between">
+                                    <span class="material-symbols-outlined text-[#B5C7EB]">volunteer_activism</span>
+                                    <span
+                                        class="font-label text-[10px] text-slate-400 uppercase tracking-widest">2024</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-on-surface dark:text-white">Python Norte 2024</h4>
+                                    <p class="text-xs text-secondary dark:text-slate-400">
+                                        <span data-lang-content="pt">Itacoatiara — Voluntário</span>
+                                        <span data-lang-content="en">Itacoatiara — Volunteer</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Event 5: Python Brasil 2024 -->
+                            <div
+                                class="bg-white dark:bg-slate-700/50 p-6 rounded-xl border border-slate-100 dark:border-slate-600 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-center justify-between">
+                                    <span class="material-symbols-outlined text-[#B5C7EB]">visibility</span>
+                                    <span
+                                        class="font-label text-[10px] text-slate-400 uppercase tracking-widest">2024</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-on-surface dark:text-white">Python Brasil 2024</h4>
+                                    <p class="text-xs text-secondary dark:text-slate-400">
+                                        <span data-lang-content="pt">Rio de Janeiro — Participação / Palestra</span>
+                                        <span data-lang-content="en">Rio de Janeiro — Participation / Talk</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Event 6: PUG Manaus 2024 -->
+                            <div
+                                class="bg-white dark:bg-slate-700/50 p-6 rounded-xl border border-slate-100 dark:border-slate-600 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                                <div class="flex items-center justify-between">
+                                    <span class="material-symbols-outlined text-[#B5C7EB]">mic</span>
+                                    <span
+                                        class="font-label text-[10px] text-slate-400 uppercase tracking-widest">2024</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-on-surface dark:text-white">Python Users Group Manaus</h4>
+                                    <p class="text-xs text-secondary dark:text-slate-400">
+                                        <span data-lang-content="pt">Palestrante</span>
+                                        <span data-lang-content="en">Speaker</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Featured Event: Python Sul 2025 -->
+                        <div
+                            class="bg-[#B5C7EB]/10 dark:bg-[#B5C7EB]/5 border-2 border-[#B5C7EB]/30 p-8 rounded-2xl relative overflow-hidden group">
+                            <div
+                                class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-8xl text-[#B5C7EB]">auto_awesome</span>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span
+                                        class="bg-[#B5C7EB] text-white text-[10px] font-bold px-3 py-1 rounded-full">
+                                        <span data-lang-content="pt">DESTAQUE 2025</span>
+                                        <span data-lang-content="en">HIGHLIGHT 2025</span>
+                                    </span>
+                                    <span class="text-[#B5C7EB] material-symbols-outlined">campaign</span>
+                                </div>
+                                <h3 class="font-headline text-2xl font-black text-on-surface dark:text-white mb-2">
+                                    Python Sul 2025 — Porto Alegre</h3>
+                                <p class="font-body text-lg text-primary-dim dark:text-[#B5C7EB] font-bold mb-4">
+                                    <span data-lang-content="pt">Palestrante: "Testes inteligentes: O futuro da qualidade com IA e Python"</span>
+                                    <span data-lang-content="en">Speaker: "Smart Testing: The future of quality with AI and Python"</span>
+                                </p>
+                                <p class="text-sm text-secondary dark:text-slate-400 max-w-2xl italic">
+                                    <span data-lang-content="pt">"Explorando a interseção entre automação de QA e algoritmos generativos para elevar o padrão da engenharia de software."</span>
+                                    <span data-lang-content="en">"Exploring the intersection between QA automation and generative algorithms to raise the software engineering standard."</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Community Quote -->
+                        <div class="p-8 bg-primary-container dark:bg-[#1b2027] rounded-xl mt-6 border dark:border-white/5">
+                            <p class="text-sm font-medium italic text-primary dark:text-brand-accent">
+                                <span data-lang-content="pt">"Construindo pontes entre a qualidade técnica e a colaboração open source."</span>
+                                <span data-lang-content="en">"Building bridges between technical quality and open source collaboration."</span>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-7">
-                    <!-- Mosaic -->
-                    <div class="h-[600px] overflow-hidden rounded-xl border border-slate-200 dark:border-white/5 bg-surface-container dark:bg-brand-dark shadow-2xl relative group">
-                        <div class="absolute inset-0 no-scrollbar overflow-x-auto flex snap-x snap-mandatory scroll-smooth" id="lifestyle-gallery">
-                            <!-- Mosaic Slide 1 -->
-                            <div class="min-w-full h-full snap-start p-2 grid grid-cols-4 grid-rows-2 gap-2 relative">
-                                <div class="col-span-2 row-span-2 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Hero" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/drone-view.jpg"/>
-                                    <div class="absolute top-4 left-4 font-label text-[10px] text-white/50 bg-black/30 px-2 py-1 backdrop-blur-sm border border-white/10">NAV_PT_01 // 400FT</div>
+
+            </div>
+        </section>
+
+        <!-- Hobbies & Lifestyle Section -->
+        <section class="py-24 px-8 bg-surface dark:bg-brand-dark overflow-hidden" id="lifestyle">
+            <div class="max-w-7xl mx-auto relative">
+                <!-- Decorative background elements -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 technical-grid text-primary/5 dark:text-brand-accent/5 -mr-32 -mt-32">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-48 h-1 text-primary/20 dark:text-brand-accent/20 border-b border-dashed">
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-12 items-center">
+                    <div class="lg:col-span-5 relative z-10">
+                        <span
+                            class="font-label text-xs uppercase tracking-widest text-primary dark:text-brand-accent mb-4 block font-bold">Analytical
+                            Vision</span>
+                        <h2
+                            class="font-headline text-4xl font-black text-on-surface dark:text-white mb-6 tracking-tighter uppercase leading-none">
+                            <span data-lang-content="pt">Perspectivas: <span
+                                    class="text-primary dark:text-brand-accent">Onde o Código encontra o
+                                    Horizonte.</span></span>
+                            <span data-lang-content="en">Perspectives: <span
+                                    class="text-primary dark:text-brand-accent">Where Code meets the
+                                    Horizon.</span></span>
+                        </h2>
+                        <div class="space-y-6">
+                            <p
+                                class="font-body text-lg text-secondary dark:text-slate-300 leading-relaxed border-l-2 border-primary/20 dark:border-brand-accent/20 pl-6">
+                                <span data-lang-content="pt">A fotografia com drones é minha extensão analítica fora do
+                                    terminal. Capturar geometrias urbanas a 400 pés exige a mesma precisão técnica e
+                                    planejamento rigoroso que aplico na análise de sistemas complexos. Cada voo é um
+                                    teste de estabilidade, perspective e criatividade.</span>
+                                <span data-lang-content="en">Drone photography is my analytical extension outside the
+                                    terminal. Capturing urban geometries at 400 feet requires the same precision and
+                                    rigorous planning I apply to complex system analysis. Each flight is a test of
+                                    stability, perspective, and creativity.</span>
+                            </p>
+                            <div class="flex items-center gap-6 mt-12">
+                                <div class="flex gap-2">
+                                    <button
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-[#1b2027] border border-slate-200 dark:border-white/10 text-primary dark:text-brand-accent hover:bg-primary hover:text-white dark:hover:bg-brand-accent dark:hover:text-brand-dark transition-all shadow-sm"
+                                        onclick="document.getElementById('lifestyle-gallery').scrollBy({left: -400, behavior: 'smooth'})">
+                                        <span class="material-symbols-outlined">west</span>
+                                    </button>
+                                    <button
+                                        class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-[#1b2027] border border-slate-200 dark:border-white/10 text-primary dark:text-brand-accent hover:bg-primary hover:text-white dark:hover:bg-brand-accent dark:hover:text-brand-dark transition-all shadow-sm"
+                                        onclick="document.getElementById('lifestyle-gallery').scrollBy({left: 400, behavior: 'smooth'})">
+                                        <span class="material-symbols-outlined">east</span>
+                                    </button>
                                 </div>
-                                <div class="col-span-2 row-span-1 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Wide" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/exp4.jpg"/>
-                                </div>
-                                <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Square 1" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/exp3.jpg"/>
-                                </div>
-                                <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Square 2" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/hero.jpg"/>
-                                </div>
-                            </div>
-                            <!-- Mosaic Slide 2 -->
-                            <div class="min-w-full h-full snap-start p-2 grid grid-cols-4 grid-rows-2 gap-2 relative">
-                                <div class="col-span-1 row-span-2 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Portrait" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/exp1.jpg"/>
-                                    <div class="absolute bottom-4 right-4 font-label text-[10px] text-white/50 bg-black/30 px-2 py-1 backdrop-blur-sm border border-white/10">ANALYSIS // ALT_SENS</div>
-                                </div>
-                                <div class="col-span-3 row-span-2 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Panorama" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/exp2.jpg"/>
-                                </div>
-                            </div>
-                            <!-- Mosaic Slide 3 -->
-                            <div class="min-w-full h-full snap-start p-2 grid grid-cols-4 grid-rows-2 gap-2 relative">
-                                <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Texture 1" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/hero.jpg"/>
-                                </div>
-                                <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Texture 2" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/exp1.jpg"/>
-                                </div>
-                                <div class="col-span-2 row-span-2 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Final Look" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/drone-view.jpg"/>
-                                    <div class="absolute top-4 right-4 font-label text-[10px] text-white/50 bg-black/30 px-2 py-1 backdrop-blur-sm border border-white/10">NAV_PT_03 // 450FT</div>
-                                </div>
-                                <div class="col-span-2 row-span-1 rounded-lg overflow-hidden relative group/img">
-                                    <img alt="Drone Horizon" class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700" src="src/assets/images/exp2.jpg"/>
+                                <div class="h-px flex-grow bg-slate-200 dark:bg-white/10 relative">
+                                    <div
+                                        class="absolute right-0 -top-2 font-label text-[8px] uppercase tracking-tighter text-outline dark:text-slate-500">
+                                        Slide 01-03 // Active</div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Interface Overlays -->
-                        <div class="absolute inset-0 pointer-events-none border-[1px] border-primary/10 dark:border-brand-accent/10 m-4 rounded-lg">
-                            <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary dark:border-brand-accent/30 rounded-tr-md"></div>
-                            <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary dark:border-brand-accent/30 rounded-bl-md"></div>
-                            <div class="absolute top-1/2 left-4 -translate-y-1/2 flex flex-col gap-1">
-                                <div class="w-1 h-1 bg-primary dark:bg-brand-accent rounded-full"></div>
-                                <div class="w-1 h-4 bg-primary/20 dark:bg-brand-accent/20 rounded-full"></div>
-                                <div class="w-1 h-1 bg-primary dark:bg-brand-accent rounded-full"></div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <!-- Mosaic -->
+                        <div
+                            class="h-[600px] overflow-hidden rounded-xl border border-slate-200 dark:border-white/5 bg-surface-container dark:bg-brand-dark shadow-2xl relative group">
+                            <div class="absolute inset-0 no-scrollbar overflow-x-auto flex snap-x snap-mandatory scroll-smooth"
+                                id="lifestyle-gallery">
+                                <!-- Mosaic Slide 1 -->
+                                <div
+                                    class="min-w-full h-full snap-start p-2 grid grid-cols-4 grid-rows-2 gap-2 relative">
+                                    <div class="col-span-2 row-span-2 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Hero"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/drone-view.jpg" />
+                                        <div
+                                            class="absolute top-4 left-4 font-label text-[10px] text-white/50 bg-black/30 px-2 py-1 backdrop-blur-sm border border-white/10">
+                                            NAV_PT_01 // 400FT</div>
+                                    </div>
+                                    <div class="col-span-2 row-span-1 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Wide"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/exp4.jpg" />
+                                    </div>
+                                    <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Square 1"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/exp3.jpg" />
+                                    </div>
+                                    <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Square 2"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/hero.jpg" />
+                                    </div>
+                                </div>
+                                <!-- Mosaic Slide 2 -->
+                                <div
+                                    class="min-w-full h-full snap-start p-2 grid grid-cols-4 grid-rows-2 gap-2 relative">
+                                    <div class="col-span-1 row-span-2 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Portrait"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/exp1.jpg" />
+                                        <div
+                                            class="absolute bottom-4 right-4 font-label text-[10px] text-white/50 bg-black/30 px-2 py-1 backdrop-blur-sm border border-white/10">
+                                            ANALYSIS // ALT_SENS</div>
+                                    </div>
+                                    <div class="col-span-3 row-span-2 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Panorama"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/exp2.jpg" />
+                                    </div>
+                                </div>
+                                <!-- Mosaic Slide 3 -->
+                                <div
+                                    class="min-w-full h-full snap-start p-2 grid grid-cols-4 grid-rows-2 gap-2 relative">
+                                    <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Texture 1"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/hero.jpg" />
+                                    </div>
+                                    <div class="col-span-1 row-span-1 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Texture 2"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/exp1.jpg" />
+                                    </div>
+                                    <div class="col-span-2 row-span-2 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Final Look"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/drone-view.jpg" />
+                                        <div
+                                            class="absolute top-4 right-4 font-label text-[10px] text-white/50 bg-black/30 px-2 py-1 backdrop-blur-sm border border-white/10">
+                                            NAV_PT_03 // 450FT</div>
+                                    </div>
+                                    <div class="col-span-2 row-span-1 rounded-lg overflow-hidden relative group/img">
+                                        <img alt="Drone Horizon"
+                                            class="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-700"
+                                            src="src/assets/images/exp2.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Interface Overlays -->
+                            <div
+                                class="absolute inset-0 pointer-events-none border-[1px] border-primary/10 dark:border-brand-accent/10 m-4 rounded-lg">
+                                <div
+                                    class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary dark:border-brand-accent/30 rounded-tr-md">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary dark:border-brand-accent/30 rounded-bl-md">
+                                </div>
+                                <div class="absolute top-1/2 left-4 -translate-y-1/2 flex flex-col gap-1">
+                                    <div class="w-1 h-1 bg-primary dark:bg-brand-accent rounded-full"></div>
+                                    <div class="w-1 h-4 bg-primary/20 dark:bg-brand-accent/20 rounded-full"></div>
+                                    <div class="w-1 h-1 bg-primary dark:bg-brand-accent rounded-full"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Social Connect Section -->
-    <section class="py-24 px-8 max-w-7xl mx-auto text-center" id="social">
-        <h3 class="font-headline text-3xl font-black dark:text-white mb-12 tracking-tighter uppercase">GABRIEL MENEZES</h3>
-        <div class="flex flex-wrap justify-center gap-12">
-            <a class="group flex flex-col items-center gap-4" href="#">
-                <div class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
-                    <span class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">photo_library</span>
-                </div>
-                <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">Flickr</span>
-            </a>
-            <a class="group flex flex-col items-center gap-4" href="#">
-                <div class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
-                    <span class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">videogame_asset</span>
-                </div>
-                <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">Twitch</span>
-            </a>
-            <a class="group flex flex-col items-center gap-4" href="#">
-                <div class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
-                    <span class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">music_note</span>
-                </div>
-                <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">TikTok</span>
-            </a>
-            <a class="group flex flex-col items-center gap-4" href="#">
-                <div class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
-                    <span class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">filter_vintage</span>
-                </div>
-                <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">VscoCam</span>
-            </a>
-            <a class="group flex flex-col items-center gap-4" href="#">
-                <div class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
-                    <span class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">photo_camera</span>
-                </div>
-                <span class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">Instagram</span>
-            </a>
-        </div>
-    </section>
-</main>
+        <!-- Social Connect Section -->
+        <section class="py-24 px-8 max-w-7xl mx-auto text-center" id="social">
+            <h3 class="font-headline text-3xl font-black dark:text-white mb-12 tracking-tighter uppercase">GABRIEL
+                MENEZES</h3>
+            <div class="flex flex-wrap justify-center gap-12">
+                <a class="group flex flex-col items-center gap-4" href="#">
+                    <div
+                        class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
+                        <span
+                            class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">photo_library</span>
+                    </div>
+                    <span
+                        class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">Flickr</span>
+                </a>
+                <a class="group flex flex-col items-center gap-4" href="#">
+                    <div
+                        class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
+                        <span
+                            class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">videogame_asset</span>
+                    </div>
+                    <span
+                        class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">Twitch</span>
+                </a>
+                <a class="group flex flex-col items-center gap-4" href="#">
+                    <div
+                        class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
+                        <span
+                            class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">music_note</span>
+                    </div>
+                    <span
+                        class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">TikTok</span>
+                </a>
+                <a class="group flex flex-col items-center gap-4" href="#">
+                    <div
+                        class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
+                        <span
+                            class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">filter_vintage</span>
+                    </div>
+                    <span
+                        class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">VscoCam</span>
+                </a>
+                <a class="group flex flex-col items-center gap-4" href="#">
+                    <div
+                        class="w-16 h-16 bg-surface-container-high dark:bg-[#1b2027] rounded-full flex items-center justify-center group-hover:bg-primary-container dark:group-hover:bg-[#a8caec] transition-all border dark:border-white/5">
+                        <span
+                            class="material-symbols-outlined text-primary dark:text-brand-accent group-hover:dark:text-brand-dark">photo_camera</span>
+                    </div>
+                    <span
+                        class="font-label text-[10px] uppercase tracking-widest text-outline dark:text-slate-400 group-hover:text-primary dark:group-hover:text-brand-accent font-bold">Instagram</span>
+                </a>
+            </div>
+        </section>
+    </main>
 
 </body>
+
 </html>
