@@ -29,3 +29,7 @@ html[lang="en"] a[data-lang-content="en"], html[lang="en"] span.inline[data-lang
 .nav-link.active { color: var(--tw-text-opacity); --tw-text-opacity: 1; color: #40617f; }
 .dark .nav-link.active { color: #a8caec; }
 .nav-link.active .active-dot { opacity: 1; }
+
+.spotify-embed {
+    border-radius: 12px;
+}

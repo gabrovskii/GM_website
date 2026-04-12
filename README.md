@@ -1,61 +1,53 @@
-# Horizon Shift | Portfolio & Lifestyle
+# Horizon Shift | Portfólio & Lifestyle
 
-A modern, responsive, and modular portfolio website for **Gabriel Menezes**, Software Quality & Testing Specialist. This project showcases technical expertise, community engagement, and personal lifestyle through a clean and professional user interface.
+Site oficial de **Gabriel Menezes**, Especialista em Qualidade & Teste de Software. O projeto apresenta uma interface moderna, técnica e minimalista, equilibrando sua trajetória profissional com sua paixão por tecnologia e fotografia aérea.
 
-## 🚀 Key Features
+## 🚁 Sobre o Projeto
+Este site foi desenvolvido para refletir uma "Estética de Grade Técnica", unindo a precisão do mundo de QA (Quality Assurance) com a liberdade do lifestyle outdoor. Ele serve como um portfólio dinâmico que destaca competências em automação, engajamento com a comunidade Python e registros visuais capturados via drone.
 
-- **Dual Language Support**: Seamlessly toggle between Portuguese (PT) and English (EN).
-- **Dark/Light Mode**: Integrated theme switching with persistence using `localStorage`.
-- **Modular Architecture**: Separated concerns with externalized CSS and JavaScript for better maintainability.
-- **Responsive Design**: Built with a mobile-first approach using Tailwind CSS.
-- **Asset Localization**: All image assets are stored locally for better performance and reliability.
-- **Interactive Gallery**: A custom-built mosaic gallery showcasing drone photography.
-- **Media Integration**: Embedded Spotify playlist for an immersive experience.
+### Funcionalidades Principais
+*   **Suporte Bilíngue:** Alternância fluida entre Português (PT-BR) e Inglês (EN).
+*   **Suporte a Dark Mode:** Troca de temas (Claro/Escuro) com persistência via `localStorage`.
+*   **Galeria "Perspectivas":** Mosaico interativo e responsivo exibindo fotografia aérea.
+*   **Integração com Spotify:** Player embarcado para uma experiência imersiva de navegação.
+*   **Arquitetura Modular:** Separação clara de responsabilidades entre HTML, CSS e JavaScript.
+*   **Design Responsivo:** Interface otimizada para dispositivos móveis e desktops utilizando Tailwind CSS.
 
-## 📁 Project Structure
+## 🛠️ Tecnologias Utilizadas
+O projeto utiliza tecnologias modernas de front-end para garantir performance e um design refinado:
 
-The project follows a clean and organized directory structure:
+*   **HTML5:** Estrutura semântica para melhor acessibilidade e SEO.
+*   **Tailwind CSS:** Estilização baseada em utilitários para um layout responsivo e customizado.
+*   **JavaScript (Vanilla):** Lógica pura para controle de idioma, tema escuro e estados de navegação.
+*   **Google Fonts:** Utilização da fonte **Epilogue** para uma estética editorial e técnica consistente.
+*   **Material Symbols:** Ícones modernos e minimalistas do Google.
 
+## 🎨 Identidade Visual (Design System)
+O sistema de design é baseado no conceito de "Technical Grid":
+
+*   **Cores Principais:** Azul Técnico (`#40617f`) e Accent Dark (`#a8caec`).
+*   **Tipografia:**
+    *   **Epilogue:** Utilizada em títulos e corpo de texto para transmitir modernidade e clareza.
+*   **Estética:** Uso de *Glassmorphism* (efeitos de desfoque), bordas sutis e tipografia em negrito para uma leitura hierárquica eficiente.
+
+## 📁 Estrutura de Pastas
 ```text
-.
-├── index.html              # Main entry point (root)
-├── src/                    # Source code directory
-│   ├── css/
-│   │   └── styles.css      # Custom external stylesheet
-│   ├── js/
-│   │   └── scripts.js      # Application logic (Dark Mode, Language, Nav)
-│   └── assets/
-│       └── images/         # Localized image and media assets
-├── docs/                   # Documentation and project resources
-│   ├── DESIGN.md           # Design System tokens and principles
-│   ├── prompt.md           # Original project requirements
-│   └── ...
-└── README.md               # Project overview
+GM_website/
+├── docs/               # Estratégia de Design e requisitos
+├── src/
+│   ├── assets/images/  # Heros, drones e fotos de experiência
+│   ├── css/            # Estilos externos (styles.css)
+│   └── js/             # Lógica (scripts.js) e config do Tailwind
+├── index.html          # Página principal
+└── README.md           # Documentação do projeto
 ```
 
-## 🛠️ Technical Stack
+## 🚀 Como Executar
+Como este é um projeto front-end estático, você pode visualizá-lo de forma simples:
 
-- **Frontend**: HTML5, Vanilla CSS3, Vanilla JavaScript (ES6+).
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (via CDN).
-- **Typography**: 
-  - [Epilogue](https://fonts.google.com/specimen/Epilogue) (Headlines/Labels)
-  - [Manrope](https://fonts.google.com/specimen/Manrope) (Body)
-  - [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
-- **Icons**: [Material Symbols Outlined](https://fonts.google.com/icons).
-
-## 🎨 Design System
-
-As documented in `docs/DESIGN.md`, the UI follows a "Technical Grid" aesthetic:
-- **Primary Color**: `#40617f` (Light) / `#a8caec` (Dark).
-- **Typography**: Consistent use of the Epilogue font family across all weights.
-- **Shapes**: Modern rounded corners (`0.125rem` to `0.75rem`).
-- **Overlays**: Glassmorphism effects with `backdrop-filter: blur(20px)`.
-
-## 📖 Getting Started
-
-To view the project locally:
-1. Clone or download the repository.
-2. Open `index.html` in any modern web browser.
+1.  Clone o repositório ou baixe os arquivos.
+2.  Abra o arquivo `index.html` em qualquer navegador moderno.
+3.  Para desenvolvimento, recomenda-se o uso da extensão **Live Server** no VS Code para visualizar as mudanças em tempo real.
 
 ---
-*Created as part of a project reorganization to follow modern web development patterns.*
+© 2026 Gabriel Menezes. Onde o Código encontra o Horizonte.

@@ -11,82 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     
     <!-- Tailwind Config -->
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class", 
-            theme: {
-                extend: {
-                    colors: {
-                        "surface-container-lowest": "#ffffff", 
-                        secondary: "#4b626e", 
-                        primary: "#40617f", 
-                        "on-background": "#003360", 
-                        "error-dim": "#4e0309", 
-                        surface: "#f8f9ff", 
-                        outline: "#227cd5", 
-                        "surface-container": "#e6eeff", 
-                        "secondary-container": "#cde6f4", 
-                        error: "#9f403d", 
-                        "on-surface": "#003360", 
-                        "surface-tint": "#40617f", 
-                        "tertiary-fixed-dim": "#d1dfe6", 
-                        "on-primary-fixed-variant": "#3d5f7c", 
-                        "on-tertiary-fixed-variant": "#556369", 
-                        "primary-container": "#cde5ff", 
-                        "on-error-container": "#752121", 
-                        "secondary-fixed": "#cde6f4", 
-                        "surface-variant": "#d4e3ff", 
-                        "secondary-fixed-dim": "#bfd8e5", 
-                        "primary-fixed-dim": "#b6d8fb", 
-                        "on-secondary-container": "#3e5560", 
-                        "on-tertiary": "#f2faff", 
-                        tertiary: "#546167", 
-                        "on-tertiary-fixed": "#39474c", 
-                        "tertiary-dim": "#48555b", 
-                        "on-primary-fixed": "#1f425e", 
-                        "surface-bright": "#f8f9ff", 
-                        "inverse-on-surface": "#889ec0", 
-                        "on-tertiary-container": "#4b595f", 
-                        "surface-container-low": "#eff3ff", 
-                        "surface-dim": "#c6dbff", 
-                        "on-secondary": "#f2faff", 
-                        "error-container": "#fe8983", 
-                        "on-error": "#fff7f6", 
-                        "on-primary": "#f4f8ff", 
-                        "primary-dim": "#335573", 
-                        "secondary-dim": "#3f5661", 
-                        "inverse-surface": "#000e22", 
-                        "outline-variant": "#7db5ff", 
-                        "surface-container-highest": "#d4e3ff", 
-                        "tertiary-fixed": "#dfedf5", 
-                        background: "#f8f9ff", 
-                        "on-primary-container": "#335572", 
-                        "on-secondary-fixed": "#2b424d", 
-                        "on-surface-variant": "#0060ad", 
-                        "surface-container-high": "#dde9ff", 
-                        "tertiary-container": "#dfedf5", 
-                        "on-secondary-fixed-variant": "#475f6a", 
-                        "primary-fixed": "#cde5ff", 
-                        "inverse-primary": "#b9dbfe", 
-                        "brand-dark": "#0c0e11", 
-                        "brand-accent": "#a8caec"
-                    }, 
-                    borderRadius: {
-                        DEFAULT: "0.125rem", 
-                        lg: "0.25rem", 
-                        xl: "0.5rem", 
-                        full: "0.75rem"
-                    }, 
-                    fontFamily: {
-                        headline: ["Epilogue"], 
-                        body: ["Epilogue"], 
-                        label: ["Epilogue"], 
-                        display: "Epilogue"
-                    }
-                }
-            }
-        };
-    </script>
+    <script src="src/js/tailwind-config.js"></script>
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="src/css/styles.css">
@@ -129,14 +54,14 @@
         </div>
         <div class="flex items-center gap-2">
             <!-- Language Toggle -->
-            <button class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all border border-slate-200 dark:border-white/10" onclick="toggleLanguage()">
+            <button id="lang-toggle" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all border border-slate-200 dark:border-white/10">
                 <span class="material-symbols-outlined text-sm text-primary dark:text-brand-accent">language</span>
                 <span class="font-label text-xs font-bold text-slate-700 dark:text-[#a5abb6] uppercase">
                     <span data-lang-content="pt">PT</span>
                     <span data-lang-content="en">EN</span>
                 </span>
             </button>
-            <button class="p-2 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all" onclick="toggleDarkMode()">
+            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-surface-container dark:hover:bg-[#1b2027] transition-all">
                 <span class="material-symbols-outlined text-primary dark:text-brand-accent">contrast</span>
             </button>
         </div>
@@ -186,7 +111,7 @@
             </div>
             <div class="col-span-full mt-12 w-full">
                 <div class="max-w-3xl mx-auto">
-                    <iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" data-testid="embed-iframe" frameborder="0" height="152" loading="lazy" src="https://open.spotify.com/embed/playlist/696ALwWYYnyTI1NFxEnQJN?utm_source=generator&amp;theme=0" style="border-radius:12px" width="100%"></iframe>
+                    <iframe class="spotify-embed" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" data-testid="embed-iframe" frameborder="0" height="152" loading="lazy" src="https://open.spotify.com/embed/playlist/696ALwWYYnyTI1NFxEnQJN?utm_source=generator&amp;theme=0" width="100%"></iframe>
                 </div>
             </div>
         </div>

@@ -35,6 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Event Listeners for Toggles
+    const themeToggle = document.getElementById('theme-toggle');
+    const langToggle = document.getElementById('lang-toggle');
+
+    if (themeToggle) themeToggle.addEventListener('click', toggleDarkMode);
+    if (langToggle) langToggle.addEventListener('click', toggleLanguage);
+
     function updateActiveLink() {
         let currentSectionId = '';
         const scrollPosition = window.scrollY + 100; // Offset for fixed header
