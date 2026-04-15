@@ -1,53 +1,77 @@
 # Horizon Shift | Portfólio & Lifestyle
 
-Site oficial de **Gabriel Menezes**, Especialista em Qualidade & Teste de Software. O projeto apresenta uma interface moderna, técnica e minimalista, equilibrando sua trajetória profissional com sua paixão por tecnologia e fotografia aérea.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-## 🚁 Sobre o Projeto
-Este site foi desenvolvido para refletir uma "Estética de Grade Técnica", unindo a precisão do mundo de QA (Quality Assurance) com a liberdade do lifestyle outdoor. Ele serve como um portfólio dinâmico que destaca competências em automação, engajamento com a comunidade Python e registros visuais capturados via drone.
+Site oficial de **Gabriel Menezes**, Especialista em Qualidade & Teste de Software. O projeto apresenta uma interface moderna, técnica e minimalista, equilibrando uma sólida trajetória profissional no mundo de QA com a paixão pela tecnologia, comunidade Python e fotografia aérea.
 
-### Funcionalidades Principais
-*   **Suporte Bilíngue:** Alternância fluida entre Português (PT-BR) e Inglês (EN).
-*   **Suporte a Dark Mode:** Troca de temas (Claro/Escuro) com persistência via `localStorage`.
-*   **Galeria "Perspectivas":** Mosaico interativo e responsivo exibindo fotografia aérea.
-*   **Integração com Spotify:** Player embarcado para uma experiência imersiva de navegação.
-*   **Arquitetura Modular:** Separação clara de responsabilidades entre HTML, CSS e JavaScript.
-*   **Design Responsivo:** Interface otimizada para dispositivos móveis e desktops utilizando Tailwind CSS.
+---
+
+## 🚁 Visão Geral
+Este site foi desenvolvido sob o conceito de **"Technical Grid Aesthetic"**, unindo a precisão analítica do Quality Assurance com a liberdade do lifestyle outdoor. Serve como um portfólio dinâmico que destaca competências em automação, liderança técnica, engajamento com a comunidade Python e registros visuais capturados via drone.
+
+### ✨ Funcionalidades Principais
+*   **🌍 Suporte Bilíngue:** Alternância em tempo real entre Português (PT-BR) e Inglês (EN).
+*   **🌙 Suporte a Dark Mode:** Troca de temas (Claro/Escuro) com persistência via `localStorage`.
+*   **📸 Galeria "Perspectivas":** Mosaico interativo e responsivo exibindo fotografia aérea com navegação por scroll.
+*   **🎵 Integração com Spotify:** Player embarcado para uma experiência imersiva de navegação.
+*   **🏗️ Arquitetura Modular:** Separação clara de responsabilidades entre HTML, CSS e JavaScript.
+*   **📱 Design Responsivo:** Interface otimizada para todos os dispositivos utilizando Tailwind CSS.
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
-O projeto utiliza tecnologias modernas de front-end para garantir performance e um design refinado:
+O projeto utiliza um stack moderno focado em performance e manutenibilidade:
 
-*   **HTML5:** Estrutura semântica para melhor acessibilidade e SEO.
-*   **Tailwind CSS:** Estilização baseada em utilitários para um layout responsivo e customizado.
-*   **JavaScript (Vanilla):** Lógica pura para controle de idioma, tema escuro e estados de navegação.
-*   **Google Fonts:** Utilização da fonte **Epilogue** para uma estética editorial e técnica consistente.
-*   **Material Symbols:** Ícones modernos e minimalistas do Google.
+*   **HTML5:** Estrutura semântica para acessibilidade e SEO.
+*   **Tailwind CSS:** Estilização baseada em utilitários para um design customizado e fluido.
+*   **JavaScript (Vanilla):** Lógica pura para controle de idioma, tema e estados de interface.
+*   **Google Fonts:** Utilização da família **Epilogue** para uma estética editorial consistente.
+*   **Material Symbols:** Ícones minimalistas e modernos.
+
+---
+
+## 👨‍💻 Foco Profissional & Comunidade
+O site detalha a jornada de Gabriel em duas frentes principais:
+
+1.  **Engenharia de Qualidade:** 7+ anos de experiência, liderança técnica (INDT/Motorola), automação Android e uso de IA/LLMs em testes.
+2.  **Comunidade Python:** Atuação como "Big Kahuna" na Python Norte 2023, palestrante na Python Sul 2025 e voluntário ativo no ecossistema brasileiro.
+
+---
 
 ## 🎨 Identidade Visual (Design System)
-O sistema de design é baseado no conceito de "Technical Grid":
+Baseado no arquivo `tailwind-config.js`, o sistema de cores e tipografia reflete um ambiente técnico e sóbrio:
 
-*   **Cores Principais:** Azul Técnico (`#40617f`) e Accent Dark (`#a8caec`).
-*   **Tipografia:**
-    *   **Epilogue:** Utilizada em títulos e corpo de texto para transmitir modernidade e clareza.
-*   **Estética:** Uso de *Glassmorphism* (efeitos de desfoque), bordas sutis e tipografia em negrito para uma leitura hierárquica eficiente.
+*   **Cores Primárias:** 
+    *   Azul Técnico (`#40617f`)
+    *   Accent Light (`#a8caec`)
+    *   Dark Surface (`#0c0e11`)
+*   **Tipografia:** 
+    *   **Epilogue:** Utilizada em títulos (Headline) e corpo de texto (Body) para transmitir modernidade e clareza.
+*   **Estética:** Uso de bordas sutis, grids técnicos, glassmorphism e tipografia em negrito para hierarquia visual eficiente.
 
-## 📁 Estrutura de Pastas
+---
+
+## 📁 Estrutura do Projeto
 ```text
 GM_website/
-├── docs/               # Estratégia de Design e requisitos
+├── docs/               # Documentação de design e estratégia
 ├── src/
 │   ├── assets/images/  # Heros, drones e fotos de experiência
-│   ├── css/            # Estilos externos (styles.css)
-│   └── js/             # Lógica (scripts.js) e config do Tailwind
-├── index.html          # Página principal
+│   ├── css/            # Estilos customizados (styles.css)
+│   └── js/             # Lógica (scripts.js) e configuração do Tailwind
+├── index.html          # Ponto de entrada principal
 └── README.md           # Documentação do projeto
 ```
 
-## 🚀 Como Executar
-Como este é um projeto front-end estático, você pode visualizá-lo de forma simples:
+---
 
-1.  Clone o repositório ou baixe os arquivos.
-2.  Abra o arquivo `index.html` em qualquer navegador moderno.
-3.  Para desenvolvimento, recomenda-se o uso da extensão **Live Server** no VS Code para visualizar as mudanças em tempo real.
+## 🚀 Como Executar
+Por ser um projeto front-end estático, a execução é imediata:
+
+1.  Clone o repositório: `git clone https://github.com/seu-usuario/GM_website.git`
+2.  Abra o arquivo `index.html` em seu navegador de preferência.
+3.  **Dica de Dev:** Utilize a extensão *Live Server* no VS Code para visualizar alterações instantaneamente.
 
 ---
 © 2026 Gabriel Menezes. Onde o Código encontra o Horizonte.
