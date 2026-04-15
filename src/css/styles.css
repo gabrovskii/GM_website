@@ -1,0 +1,35 @@
+body { font-family: 'Manrope', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.tonal-shift-no-border { border: none !important; }
+.glass-overlay { backdrop-filter: blur(20px); background: rgba(255, 255, 255, 0.7); }
+.dark .glass-overlay { background: rgba(12, 14, 17, 0.5); }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.dark .text-primary-pastel { color: #a8caec !important; }
+.dark .bg-primary-pastel { background-color: #a8caec !important; }
+.dark .border-primary-pastel { border-color: #a8caec !important; }
+.dark .before-dot::before { background-color: #a8caec !important; }
+
+.technical-grid {
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+[data-lang-content] { display: none; }
+html[lang="pt-br"] [data-lang-content="pt"] { display: inline; }
+html[lang="en"] [data-lang-content="en"] { display: inline; }
+html[lang="pt-br"] span[data-lang-content="pt"], html[lang="pt-br"] p[data-lang-content="pt"], html[lang="pt-br"] div[data-lang-content="pt"] { display: block; }
+html[lang="en"] span[data-lang-content="en"], html[lang="en"] p[data-lang-content="en"], html[lang="en"] div[data-lang-content="en"] { display: block; }
+
+/* Specific Fixes for Inline elements */
+html[lang="pt-br"] a[data-lang-content="pt"], html[lang="pt-br"] span.inline[data-lang-content="pt"] { display: inline !important; }
+html[lang="en"] a[data-lang-content="en"], html[lang="en"] span.inline[data-lang-content="en"] { display: inline !important; }
+
+.nav-link.active { color: var(--tw-text-opacity); --tw-text-opacity: 1; color: #40617f; }
+.dark .nav-link.active { color: #a8caec; }
+.nav-link.active .active-dot { opacity: 1; }
+
+.spotify-embed {
+    border-radius: 12px;
+}
