@@ -1,77 +1,65 @@
-# Portfólio
+# Stellix Portfolio - Next.js Refactor
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-3.4-blue)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
 
-Site oficial de **Gabriel Menezes**, Especialista em Qualidade & Teste de Software. O projeto apresenta uma interface moderna, técnica e minimalista, equilibrando uma sólida trajetória profissional no mundo de QA com a paixão pela tecnologia, comunidade Python e fotografia aérea.
+## 🚁 Project Overview
+This is the official portfolio website of **Gabriel Menezes**, a Software Quality & Testing Specialist. The project serves as a dynamic professional showcase, designed under the **"Technical Grid Aesthetic"** concept. It bridges the gap between the analytical precision of Quality Assurance and the creative freedom of outdoor exploration and aerial photography.
 
----
-
-## 🚁 Visão Geral
-Este site foi desenvolvido sob o conceito de **"Technical Grid Aesthetic"**, unindo a precisão analítica do Quality Assurance com a liberdade do lifestyle outdoor. Serve como um portfólio dinâmico que destaca competências em automação, liderança técnica, engajamento com a comunidade Python e registros visuais capturados via drone.
-
-### ✨ Funcionalidades Principais
-*   **🌍 Suporte Bilíngue:** Alternância em tempo real entre Português (PT-BR) e Inglês (EN).
-*   **🌙 Suporte a Dark Mode:** Troca de temas (Claro/Escuro) com persistência via `localStorage`.
-*   **📸 Galeria "Perspectivas":** Mosaico interativo e responsivo exibindo fotografia aérea com navegação por scroll.
-*   **🎵 Integração com Spotify:** Player embarcado para uma experiência imersiva de navegação.
-*   **🏗️ Arquitetura Modular:** Separação clara de responsabilidades entre HTML, CSS e JavaScript.
-*   **📱 Design Responsivo:** Interface otimizada para todos os dispositivos utilizando Tailwind CSS.
+The website highlights:
+- **Professional Journey**: Over 7 years of expertise in QA, technical leadership, and Android automation.
+- **Community Engagement**: Active involvement in the Python Brazil community, including event organization and public speaking.
+- **Perspectives**: A visual gallery of aerial photography captured via drone, representing the balance between code and the horizon.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-O projeto utiliza um stack moderno focado em performance e manutenibilidade:
+## 🏗️ Design Pattern: Component-Based Architecture
+The project has been refactored from a legacy single-file HTML/JS project into a professional Next.js 14+ application using the App Router architecture to ensure scalability and maintainability.
 
-*   **HTML5:** Estrutura semântica para acessibilidade e SEO.
-*   **Tailwind CSS:** Estilização baseada em utilitários para um design customizado e fluido.
-*   **JavaScript (Vanilla):** Lógica pura para controle de idioma, tema e estados de interface.
-*   **Google Fonts:** Utilização da família **Epilogue** para uma estética editorial consistente.
-*   **Material Symbols:** Ícones minimalistas e modernos.
+### 🧩 Componentization
+Deconstructed the legacy `index.html` into specialized React components in `src/components/`:
+- **Navbar**: Dynamic navigation with active section tracking.
+- **Hero**: Main entry point with Spotify integration and optimized images.
+- **Experience**: Timeline and technical stack display.
+- **Journey**: Community involvement and event history.
+- **Lifestyle**: Interactive mosaic gallery for aerial photography.
+- **Social**: Connection points and footer links.
 
----
-
-## 👨‍💻 Foco Profissional & Comunidade
-O site detalha a jornada de Gabriel em duas frentes principais:
-
-1.  **Engenharia de Qualidade:** 7+ anos de experiência, liderança técnica (INDT/Motorola), automação Android e uso de IA/LLMs em testes.
-2.  **Comunidade Python:** Atuação como "Big Kahuna" na Python Norte 2023, palestrante na Python Sul 2025 e voluntário ativo no ecossistema brasileiro.
-
----
-
-## 🎨 Identidade Visual (Design System)
-Baseado no arquivo `tailwind-config.js`, o sistema de cores e tipografia reflete um ambiente técnico e sóbrio:
-
-*   **Cores Primárias:** 
-    *   Azul Técnico (`#40617f`)
-    *   Accent Light (`#a8caec`)
-    *   Dark Surface (`#0c0e11`)
-*   **Tipografia:** 
-    *   **Epilogue:** Utilizada em títulos (Headline) e corpo de texto (Body) para transmitir modernidade e clareza.
-*   **Estética:** Uso de bordas sutis, grids técnicos, glassmorphism e tipografia em negrito para hierarquia visual eficiente.
+### 🌍 i18n & State Management
+- **Language Switcher (PT/EN)**: Implemented via **React Context API** (`LanguageContext.tsx`). Preference is persisted in `localStorage`.
+- **Theme Management**: Dark/Light mode managed via `ThemeContext.tsx`, integrating with Tailwind's `dark:` classes.
 
 ---
 
-## 📁 Estrutura do Projeto
-```text
-GM_website/
-├── docs/               # Documentação de design e estratégia
-├── src/
-│   ├── assets/images/  # Heros, drones e fotos de experiência
-│   ├── css/            # Estilos customizados (styles.css)
-│   └── js/             # Lógica (scripts.js) e configuração do Tailwind
-├── index.html          # Ponto de entrada principal
-└── README.md           # Documentação do projeto
-```
+## 🚀 Optimization & Engineering
+- **Next/Image**: All images utilize optimized loading, resizing, and modern formats.
+- **Next/Font**: Google Fonts (**Manrope**, **Epilogue**, **Inter**, **Space Grotesk**) are hosted locally for zero layout shift.
+- **Performance**: High Server-Side Rendering (SSR) utilization with minimal client-side interactivity.
 
 ---
 
-## 🚀 Como Executar
-Por ser um projeto front-end estático, a execução é imediata:
-
-1.  Clone o repositório: `git clone https://github.com/seu-usuario/GM_website.git`
-2.  Abra o arquivo `index.html` em seu navegador de preferência.
-3.  **Dica de Dev:** Utilize a extensão *Live Server* no VS Code para visualizar alterações instantaneamente.
+## 🛠️ Local Setup
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/stellix-adm/Stellix.git
+   cd Stellix
+   ```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
 
 ---
-© 2026 Gabriel Menezes. Onde o Código encontra o Horizonte.
+
+## 🚢 Deployment to Vercel
+1. Ensure all changes are pushed to the `main` branch.
+2. In the [Vercel Dashboard](https://vercel.com/), import the repository.
+3. Use the **Next.js** preset with the build command `npm run build`.
+
+---
+© 2026 Gabriel Menezes. Where Code Meets the Horizon.
